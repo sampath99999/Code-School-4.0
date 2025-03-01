@@ -1,0 +1,278 @@
+#text {
+  font-size: 48px;
+  font-weight: bolder;
+}
+.btn-1 {
+  width: 150px;
+  height: 50px;
+  background-color: #f89646;
+  color: white;
+  font-size: 18px;
+  border: none;
+  padding: 10px;
+}
+
+.btn-1:hover {
+  background-color: #f9fafa;
+  color: #f89646;
+  border: 2px solid #f89646;
+}
+
+.btn-2:hover {
+  background-color: #f9fafa;
+  color: #6bb7be;
+  border: 2px solid #6bb7be;
+}
+
+.btn-2 {
+  margin-top: 5px;
+  width: 150px;
+  height: 50px;
+  background-color: #6bb7be;
+  color: white;
+  font-size: 18px;
+  border: none;
+  padding: 10px;
+}
+.btn-3 {
+  margin-top: 5px;
+  width: 170px;
+  height: 55px;
+  background-color: #6bb7be;
+  color: white;
+  font-size: 18px;
+  border: none;
+  padding: 10px;
+}
+
+
+
+.rounded-btn {
+  text-align: center;
+  
+}
+
+.rounded-btn button {
+  height: 15px;
+  width: 15px;
+  border-radius: 100%;
+  background-color: #6ab7bc;
+  border: none;
+}
+
+.rounded-btn button:active {
+  background-color: #f89646;
+}
+
+.price_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+.price_box a {
+  text-decoration: none;
+  margin-right: 5px;
+}
+
+.product-card {
+  text-align: center;
+  padding: 55px;
+}
+.product-card img {
+  width: 100%;
+  margin-bottom: 15px;
+}
+.product-title {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+.product-price {
+  color: #000000;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.f-details {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+.buy-now {
+  color: #007bff;
+  text-decoration: none;
+}
+.buy-now:hover {
+  text-decoration: underline;
+}
+.card-text {
+  font-size: 19px;
+}
+
+.f-img {
+  height: 300px;
+  object-fit: contain;
+}
+.img-4 {
+  padding-bottom: 100px;
+}
+
+.client-card {
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 50px;
+}
+
+.client-img {
+  width: 130px;
+  height: 130px;
+  border-radius: 70px;
+  margin-right: 15px;
+  border: 10px solid #6ab7bd;
+}
+
+.client-name {
+  font-size: 20px;
+  color: #5ab4ab;
+  font-weight: bold;
+  margin-left: 30px;
+}
+
+.client-text {
+  font-size: 17px;
+  color: #666;
+  padding-top: 15px;
+  margin-top: 20px;
+  margin-left: -60px;
+}
+.arrow-btn {
+  text-align: center;
+  margin-top: 10px;
+}
+.arrow-btn button:hover {
+  background-color: black;
+  color: white;
+}
+
+.arrow-btn button {
+  background-color: #5ab4ab;
+  border: none;
+  color: white;
+  border-radius: 50%;
+  padding: 8px 12px;
+  font-size: 20px;
+}
+
+.form_container input {
+  width: 100%;
+  border: none;
+  height: 60px;
+  margin-bottom: 25px;
+  padding-left: 15px;
+  outline: none;
+  font-size: 20px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.05);
+}
+.form_container input::placeholder {
+  color: black;
+}
+
+#message-box {
+  height: 120px;
+}
+
+.form_container h2 {
+  margin-bottom: 25px;
+}
+#googleMap {
+  overflow: hidden;
+}
+
+/* .links_list a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+.images {
+  width: 40%;
+}
+.footer_images img {
+  display: flex;
+  background-color: white;
+  width: 80px;
+  padding: 5px;
+}
+
+.footer_products img {
+  width: 50px;
+  object-fit: cover;
+  background-color: white;
+  padding: 10px;
+}
+#search input {
+  width: 100%;
+  height: 50px;
+  background-color: whitesmoke;
+  overflow: hidden !important;
+} */
+
+.footer {
+  background: #222;
+  margin: 0px 45px;
+}
+
+.footer h5 {
+  font-weight: bold;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.insta-div {
+  margin: 5px;
+  background-color: white;
+  padding: 10px;
+}
+
+.insta-img {
+  margin: 1%;
+  border-radius: 5px;
+}
+
+.subsrcibe:hover {
+  background-color: var(--bs-dark);
+  color: var(--blue) !important;
+}
+
+.social-icon i {
+  font-size: 20px;
+  padding: 10px;
+  /* border: 1px solid #fff;
+  border-radius: 5px; */
+}
+
+.social-icon:hover {
+  border-color: var(--bs-warning) !important;
+  color: var(--bs-warning) !important;
+}
+
+.info:hover {
+  color: var(--bs-warning) !important;
+}
+
+.insta-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+
+
+
+/* .quick_links{
+  padding: 80px;
+  margin-bottom: 80px;
+}
+ */
