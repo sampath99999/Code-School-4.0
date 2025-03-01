@@ -1,0 +1,107 @@
+:root {
+  --green: #6bb7be;
+  --light-grey: #f9fafa;
+  --orange: #f89646;
+  --card-background: #f7fafa;
+  --light-green: #78bfc7;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.btn-green {
+  background-color: var(--green);
+  color: white;
+  border: none;
+  transition: 0.3s;
+}
+.btn-green:hover {
+  background-color:transparent;
+  color: var(--green);
+  border: 1px solid var(--green);
+}
+
+.btn-orange {
+  background-color: var(--orange);
+  color: white;
+  border: none;
+  transition: 0.3s;
+}
+
+.btn-orange:hover {
+  background-color: var(--light-grey);
+  color: var(--orange);
+  border: 1px solid var(--orange);
+}
+.carousel-item {
+  height: auto !important;
+}
+
+.text-green {
+  color: var(--green);
+  text-decoration: none;
+}
+.card {
+  background-color: var(--card-background);
+  border: none;
+}
+.border-green {
+  border: 10px solid var(--green);
+}
+.border-thin-green {
+  border: 1px solid var(--green);
+}
+
+.testimonal {
+  height: auto !important;
+}
+
+.contact-form input::placeholder,
+textarea::placeholder {
+  color: black !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.hover-orange:hover {
+  color: var(--orange) !important;
+}
+
+.hover-border-orange:hover {
+  border: 1px solid var(--orange) !important;
+}
+
+button[data-bs-target="#carouselExampleIndicators"] {
+  height: 12px !important;
+  width: 12px !important;
+  border-radius: 100%;
+  background-color: var(--green) !important;
+}
+#carouselExampleIndicators .carousel-indicators .active {
+  background-color: var(--orange) !important;
+  transform: scale(1.5);
+}
+button[data-bs-target="#carouselExampleAutoplaying"] {
+  height: 45px !important;
+  width: 45px !important;
+  border-radius: 100%;
+  background-color: var(--green) !important;
+  color: white !important;
+}
+
+#carouselExampleAutoplaying{
+  position: relative;
+}
+.carousel-btn {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+}
+.carousel-btn button:hover {
+  background-color: black !important;
+}
