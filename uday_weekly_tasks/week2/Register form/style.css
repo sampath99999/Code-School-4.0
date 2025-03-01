@@ -1,0 +1,15 @@
+
+form{
+    width:400px;
+    background-color: whitesmoke;
+    padding: 20px;
+}
+input:focus{
+    outline: none!important;
+}
+p{
+    margin-top:-20px;
+}
+#GenderError{
+    margin-top: auto;
+}
