@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(backgroundimg2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container{
+    /* width: 100vh; */
+    height: 90vh;
+    margin: 50px 50px ;
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: white;
+}
+
+
+
+.left{
+    width: 50%;
+    /* border: 1px solid black; */
+    border-radius: 20px;
+    margin: 5px;
+    position: relative;
+    background-image: url(registration-form-template-with-flat-design_23-2147971971.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+.right{
+    width: 50%;
+    /* border: 1px solid black; */
+    border-radius: 20px;
+    margin: 10px;
+    text-align: center;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: 30%;
+    position: relative;
+    top: 30px;
+    width: 50%;
+    margin: auto;
+    
+}
+form :last-child{
+    margin-top: 10px;
+}
+label{
+    /* border: 1px solid black; */
+    text-align: left;
+    font-size: 18px;
+    border-radius: 2px;
+}
+input{
+    /* border: 1px solid black; */
+    text-align: left;
+    padding: 10px;
+    /* margin: 4px; */
+    background-color: rgb(242, 239, 239);
+    border-radius: 6px;
+    border: none;
+}
+input[select]{
+    padding: 10px;
+}
+.checkbox{
+    text-align: left;
+    display: inline;
+}
+button{
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+}
+
+i{
+    height: 0px;
+    margin: 5px 5px; 
+}
+.g-sign{
+    background-color: black;
+    color: aliceblue;
+}
+img{
+    margin-right: 7px;
+    margin-top: 2px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    
+} 
+
+
+hr{
+    width: 90px;
+    position: absolute;
+    color: white;
+    top: 40px;
+    left: 150px
+}
+
+   
