@@ -1,0 +1,118 @@
+.nav-bg{
+    background-image: url(./Images/slider-bg-2.webp);
+}
+.nav-btn{
+    color: #fff;
+}
+.nav-btn:hover{
+    background-color: #F7A51C;
+    color: #fff;
+}
+a{
+    text-decoration: none;
+}
+.border-line {
+    height: 4px;
+    position: relative;
+    width: 30px;
+    background: #F7A51C;
+}
+.border-line::after {
+    width: 30px;
+    position: absolute;
+    right: -30px;
+    content: '';
+    background: #6549ec;
+    top: 0px;
+    height: 4px;
+}
+.border-line.center {
+    left: -15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+body{
+    font-family: 'poppins', sans-serif;
+    background: #ececec;
+}
+
+.box-area{
+    width: 930px;
+}
+
+.right-box{
+    padding: 40px 30px 40px 40px;
+}
+
+::placeholder{
+    font-size: 16px;
+}
+
+.rounded-4{
+    border-radius: 20px;
+}
+.rounded-5{
+    border-radius: 30px;
+}
+@media only screen and (max-width: 768px){
+    .box-area{
+       margin: 0 10px;
+    }
+    .left-box{
+       height: 100px;
+       overflow: hidden;
+    }
+    .right-box{
+       padding: 20px;
+    }
+}
+.abt-cmny{
+    width: 600px;
+    padding: 20px;
+}
+.company-section{
+    margin-top: 35px;
+    height: 75vh;
+    width: 100%;
+    background-image: url(./Images/about/main.webp);
+    border-radius: 8px;
+}
+.company-section-bg{
+    background-image: url(./Images/textured-canvas-surface.jpg);
+}
+.card-img-top{
+    height: 443px;
+}
+.addInput{
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    border-radius: 8px;
+    padding: 4px;
+}
+.addJobButton{
+    border: none;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    /* border-radius: 8px; */
+    /* padding: 5px; */
+    background: #F7A51C;
+}
+.contact-button{
+    height: 55px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 8px;
+    padding: 5px;
+    background: #F7A51C;
+}
+.contact-button:hover{
+    color: #fff;
+    background: #6549ec;
+}
+input:focus {
+    outline: none;
+}
+.modal-bg{
+    background-image: url(./Images/slider-bg-2.webp);
+    color: #fff;
+}

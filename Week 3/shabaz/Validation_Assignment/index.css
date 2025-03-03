@@ -1,0 +1,19 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+label{
+    margin-right: 10px;
+    font-size: large;
+}
+input{
+    padding: 3px;
+    border-radius: 4px;
+}
+div button{
+    height: 40px;
+    width: 200px;
+    border-radius: 5px;
+}
