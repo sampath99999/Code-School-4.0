@@ -1,0 +1,81 @@
+.navbar-brand img {
+  width: 200px;
+  margin-left: 10px;
+}
+
+.nav-item a {
+  margin-top: 10px;
+  color: white;
+}
+
+#lastLogin {
+  font-size: 10px;
+  margin-left: 0px;
+  
+  margin: auto;
+}
+.user {
+  font-size: 13px;
+}
+
+.required::after {
+    content: " *";
+    color: red;
+  }
+
+.dash-line {
+  border-bottom: 1px solid #000;
+  margin: 4px 0;
+}
+nav {
+  border-bottom: rgb(0, 0, 0);
+}
+
+
+.note {
+    background-color: #fcf8e3;
+  }
+
+.note-text p {
+  margin-left: 25px;
+ 
+}
+
+
+.createBtn{
+    text-align: center;
+}
+.employee{
+    width: 180px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #000;
+    color: white;
+    border-radius: 10px;
+    border: none;
+
+
+}
+.even-row{
+    background-color: #f9f9f9;
+}
+.error {
+    display: block;
+    margin-top: 2px;
+}
+
+.required {
+    transition: color 0.3s ease;
+}
+.form-control, .form-select {
+    margin-bottom: 5px;
+}
+
+.search-btn{
+  height: auto;
+}
+
+.form-group{
+  align-items: center;
+  
+}

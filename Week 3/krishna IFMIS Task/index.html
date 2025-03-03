@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>IFMIS Task</title>
+    <link rel="stylesheet" href="style.css" />
+   
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-center">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="./ifmis-logo.png" alt="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse mx-4" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-6">
+            <li class="nav-item">
+              <a class="nav-link bg-secondary px-1" href="#">
+                <i class="bi bi-list"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link bg-secondary mx-1" href="#">
+                <i class="bi bi-house"></i> Modules
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link bg-secondary mx-1">
+                <i class="bi bi-person"></i> Profile
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link bg-secondary mx-1">
+                <i class="bi bi-box-arrow-right"></i> Logout
+              </a>
+            </li>
+            <li class="nav-item">
+              <h6 class="nav-link text-light" id="lastLogin">
+                Last login <br /> 23-feb-2024 <br /> 6:00
+              </h6>
+            </li>
+          </ul>
+          <div class="nav-right text-light">
+            <div class="user bg-secondary px-4">
+              <h6 class="user">
+                <i class="bi bi-person"></i> Welcome K.Krishna Vamsi
+                <i class="fa-solid fa-caret-down mx-1"></i>
+              </h6>
+              <p class="mx-2">(21N31A6922)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="employee-section mx-3 my-4">
+      <div class="card px-2">
+        <div class="addEmployee p-2">
+          <h6>Add Employee</h6>
+          <div class="dash-line"></div>
+        </div>
+
+        <div class="note rounded p-2">
+          <p>Note:</p>
+          <div class="note-text">
+            <p>
+              1. Any Employee added by you will have to be approved by your
+              concerned auditor
+            </p>
+            <p>
+              2. If you do not find the correct designation or department,
+              please contact the technical team so that they will add the
+              particular into the DB
+            </p>
+          </div>
+        </div>
+
+        <form onsubmit="return validateForm(event)">
+          <div class="form-container mt-3">
+            <h6 class="text-center border-bottom border-top border-2 p-2 mb-0">
+              Employee Basic Detail
+            </h6>
+          </div>
+
+          <div class="row border-bottom align-items-center pt-1 mt-0 ">
+            <div class="col-md-4">
+              <div class="form-group d-flex align-items-center">
+                <label class="required col-6">Select Scale Type</label>
+                <div class="input-box col-6">
+                  <select class="form-select" id="scaleType">
+                    <option selected>Select</option>
+                    <option>All India service scales</option>
+                    <option>Judicial Scales</option>
+                    <option>State Scales</option>
+                    <option>UGC</option>
+                    <option>AICTE</option>
+                    <option>Others(Special Cases)</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="form-group d-flex">
+                <label class="required col-6">Employee Code</label>
+                <div class="input-box col-6">
+                  <input
+                    id="employeeCode"
+                    type="text"
+                    class="form-control"
+                    placeholder="Employee Code"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="form-group d-flex">
+                <label class="required col-6">BILL ID</label>
+                <div class="input-box col-6">
+                  <select id="billId" class="form-select">
+                    <option selected>SELECT</option>
+                    <option>Bill Id-1</option>
+                    <option>Bill Id-2</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row py-1 even-row align-items-center">
+            <div class="col-md-4">
+              <div class="form-group d-flex">
+                <label class="required col-6">Employee Name</label>
+                <div class="input-box col-6">
+                  <input
+                    id="employeeName"
+                    type="text"
+                    class="form-control"
+                    placeholder="Employee Name"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="form-group d-flex">
+                <label class="col-6">Employee Sur-Name</label>
+                <div class="input-box col-6" id="employeeSurname">
+                  <input
+                 id="employeeSurname"
+                    type="text"
+                    class="form-control"
+                    placeholder="Surname"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group d-flex">
+                <label class="required col-6">Select Cader</label>
+                <div class="input-box col-6">
+                  <select id="cader" class="form-select">
+                    <option selected>SELECT</option>
+                    <option>SELECT Cadre-1</option>
+                    <option>SELECT Cadre-2</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row py-1 border-top">
+            <div class="col-md-4">
+              <div class="form-group d-flex">
+                <i class="bi bi-gender-female"></i>
+                <label class="required col-6">Gender</label>
+                <div class="input-box col-6">
+                  <select id="gender" class="form-select">
+                    <option selected>SELECT</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Others</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group d-flex">
+                <label class="required col-6">Current Working Status</label>
+                <div class="input-box col-6">
+                  <select id="workingStatus" class="form-select">
+                    <option selected>SELECT</option>
+                    <option>Working</option>
+                    <option>nemployed</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group d-flex">
+                <label class="required col-6">Sub Type</label>
+                <div class="input-box col-6">
+                  <select id="subType" class="form-select">
+                    <option selected>SELECT</option>
+                    <option>Sub type-1</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row py-1 border-top even-row">
+            <div class="col-md-4">
+              <div class="form-group d-flex">
+                <label class="required col-6">Date of Birth</label>
+                <div class="input-box col-6">
+                  <input
+                    id="dob"
+                    type="date"
+                    class="form-control"
+                    placeholder="DOB"
+                  />
+                  <span class="calendar-icon"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="form-group d-flex">
+                <label class="required col-6">Designation</label>
+                <div class="input-box col-6">
+                  <select id="designation" class="form-select">
+                    <option selected>SELECT</option>
+                    <option>Employee</option>
+                    <option>Farmer</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="form-group d-flex">
+                <label class="col-6">Department</label>
+                <div class="input-box col-6" id="department">
+                  <input
+                    type="text"
+                    class="form-control"
+                    value="POLICE"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="otherDetails py-1">
+            <h6 class="text-center border-bottom border-top border-2 py-1">
+              Other Details
+            </h6>
+          </div>
+
+          <div class="row even-row">
+            <div class="col-md-4">
+              <div class="form-group d-flex">
+                <label class="required col-6">TSGLI NO</label>
+                <div class="input-box col-6">
+                  <input
+                    id="tsgliNo"
+                    type="text"
+                    class="form-control"
+                    placeholder="TSGLI NO"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="form-group d-flex">
+                <label class="required col-6">CPS/GPF Type</label>
+                <div class="input-box col-6" id="cps">
+                  <input type="radio" name="cps" value="gpf" /> GPF
+                  <input type="radio" name="cps" value="cps" /> CPS
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group d-flex">
+                <label class="required col-6">GPF NO</label>
+                <div class="input-box col-6">
+                  <input
+                    id="gpfNo"
+                    type="text"
+                    class="form-control"
+                    placeholder="GPF/CPS NO."
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row py-1 border-bottom border-top">
+            <div class="col-md-4">
+              <div class="form-group d-flex">
+                <label class="required col-6">Aadhaar No</label>
+                <div class="input-box col-6">
+                  <input
+                    id="aadhaarNo"
+                    type="text"
+                    class="form-control"
+                    placeholder="Aadhaar No"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group d-flex">
+                <label class="required col-6">Marital Status</label>
+                <div class="input-box col-6">
+                  <select id="martialStatus" class="form-select">
+                    <option selected>SELECT</option>
+                    <option>Married</option>
+                    <option>Single</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group d-flex">
+                <label class="required col-6">PAN NO</label>
+                <div class="input-box col-6">
+                  <input
+                    id="panNo"
+                    type="text"
+                    class="form-control"
+                    placeholder="PAN NO."
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row py-1 border-bottom border-top even-row">
+            <div class="col-md-4">
+              <div class="form-group d-flex align-items-start">
+                <label class="required col-6">Email ID</label>
+                <div class="input-box col-6">
+                  <input
+                    id="email"
+                    type="email"
+                    class="form-control"
+                    placeholder="Email ID"
+                  />
+                  <small>(Ex. krishna@gmail.com)</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group d-flex">
+                <label class="required col-6">Employee Address</label>
+                <div class="input-box col-6">
+                  <textarea id="address" class="form-control" rows="1"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group d-flex  align-items-start">
+                <label class="required col-6">Mobile NO</label>
+                <div class="input-box col-6">
+                  <input
+                    id="mobileNo"
+                    type="text"
+                    class="form-control"
+                    placeholder="Employee Mobile No"
+                  />
+                  <small>(Ex. 8142450194 pay slip will be sent to Mobile No)</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row py-1">
+            <div class="col-md-4">
+              <div class="form-group d-flex">
+                <label class="required col-6">Earned Leaves Left</label>
+                <div class="input-box col-6">
+                  <input
+                    id="earnedLeaves"
+                    type="text"
+                    class="form-control"
+                    placeholder="Earned Leaves"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group d-flex">
+                <label class="required col-6">Half Pay Leaves Left</label>
+                <div class="input-box col-6">
+                  <input
+                    id="halfPayLeaves"
+                    type="text"
+                    class="form-control"
+                    placeholder="Half Pay Leaves"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="BankDetails py-1">
+            <h6 class="text-center border-bottom border-top border-2 py-1">
+              Bank Details
+            </h6>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group d-flex">
+                <label class="required col-6">Bank Account Number</label>
+                <div class="input-box col-6">
+                  <input
+                    id="bankAccNo"
+                    type="password"
+                    class="form-control"
+                    placeholder="Enter your bank acc No"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group d-flex">
+                <label class="required col-6">Confirm Bank Acc No</label>
+                <div class="input-box col-6">
+                  <input
+                    id="confirmBankAccNo"
+                    type="password"
+                    class="form-control"
+                    placeholder="Confirm Bank Acc No"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row py-1 border-top even-row">
+            <div class="col-md-4">
+              <div class="form-group d-flex">
+                <label class="required col-6">Enter IFSC</label>
+                <div class="input-box col-6 d-flex">
+                  <input
+                    id="ifsc"
+                    type="text"
+                    class="form-control"
+                    placeholder="IFSC"
+                  />
+                  <button class="border-0 mx-1 search-btn" type="button" id="ifscSearch">Search</button>
+                </div>
+              
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group d-flex">
+                <label class="required col-6">Bank Name</label>
+                <div class="input-box col-6">
+                  <input id="bankName" type="text" class="form-control" readonly />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group d-flex">
+                <label class="required col-6">Branch</label>
+                <div class="input-box col-6">
+                  <input id="branchName" type="text" class="form-control" readonly />
+                </div>
+              </div>
+            </div>
+
+          <div class="AdditionalDetails py-1" id="stateScaleDetails">
+            <h6 class="text-center border-bottom border-top border-2 py-1">
+              Additional Details for state scale Employee
+            </h6>
+
+            <div class="row" id="row1">
+              <div class="col-12 text-center">
+                <div class="form-group d-flex justify-content-center">
+                  <label for="" class="required">Cadre Strength:</label>
+                  <div class="input-box mx-2">
+                    <input type="radio" name="cadre" value="cadre" /> Counted under Sanctioned strength
+                    <input type="radio" name="cadre" value="cadre" /> Exempted
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 text-center text-secondary">
+                <p>
+                  if this employee is not counted under your sanctioned strength
+                  then you cannot claim a regular salary bill for this employee
+                </p>
+              </div>
+            </div>
+
+            <div class="row border-top py-1 even-row" id="row2">
+              <div class="col-md-4">
+                <div class="form-group d-flex  align-items-start">
+                  <label class="required col-6">Last Increment Date</label>
+                  <div class="input-box col-6">
+                    <input
+                      id="lastIncrementDate"
+                      type="date"
+                      class="form-control"
+                      placeholder="Inc date"
+                    />
+                    <small>
+                      if adding a new employee the last increment date is date of
+                      joining into present post
+                    </small>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group d-flex">
+                  <label class="required col-6">Date of joining service</label>
+                  <div class="input-box col-6">
+                    <input
+                      id="joiningServiceDate"
+                      type="date"
+                      class="form-control"
+                      placeholder="Inc date"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group d-flex">
+                  <label class="required col-6">Date of joining present post</label>
+                  <div class="input-box col-6">
+                    <input
+                      id="joiningPostDate"
+                      type="date"
+                      class="form-control"
+                      placeholder="Inc date"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row py-1 border-top" id="row3">
+              <div class="col-md-4">
+                <div class="form-group d-flex">
+                  <label class="required col-6">Date of Retirement</label>
+                  <div class="input-box col-6"></div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="form-group d-flex">
+                  <label class="required col-6">Gis Category</label>
+                  <div class="input-box col-6">
+                    <select id="gisCategory" class="form-select">
+                      <option selected>SELECT</option>
+                      <option>GIS-1</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row py-1 border-top even-row">
+              <div class="col-md-4">
+                <div class="form-group d-flex">
+                  <label class="required col-6">Emp living in Govt Quarters</label>
+                  <div class="input-box mx-3 col-6" id="govtQuarters">
+                    <input type="radio" name="Yes" value="Quarters" /> Yes
+                    <input type="radio" name="Yes" value="Quarters" /> No
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="payDetails py-1">
+              <h6 class="text-center border-bottom border-top border-2 py-2">
+                Pay Details
+              </h6>
+            </div>
+
+            <div class="row">
+              <div class="col-md-4">
+                <div class="form-group d-flex even-row">
+                  <label class="required col-6">Select PRC</label>
+                  <div class="input-box col-6">
+                    <select class="form-select" id="prcSelect">
+                      <option selected>Select</option>
+                      <option>PRC-1</option>
+                      <option>PRC-2</option>
+                      <option>PRC-3</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="borders border-top py-3"></div>
+            <div class="row py-1">
+              <div class="col-md-6">
+                <div class="form-group d-flex align-items-center">
+                  <label class="required col-6">
+                    Upload Necessary Documents (proceeding/Go/joining order/proof
+                    of employment etc..)
+                  </label>
+                  <div class="d-flex col-6">
+                    <input id="documents" type="file" class="form-control" />
+                    <button
+                      class="btn btn-success mx-2"
+                      type="button"
+                      id="addBtn"
+                    >
+                      Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-8 py-3 px-4">
+                <div class="form-group d-flex align-items-center">
+                  <label class="required col-6">Auditor</label>
+                  <div class="d-flex col-6">
+                    <select class="form-select" id="auditorSelect">
+                      <option selected>Select</option>
+                      <option>Audit-1</option>
+                      <option>Audit-2</option>
+                      <option>Audit-3</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="create-employee mt-3 text-center">
+            <button type="submit" class="employee">Create Employee</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="table-container mt-3">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Employee Name</th>
+            <th>Employee Code</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="employeeTableBody"></tbody>
+      </table>
+    </div>
+
+    <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
