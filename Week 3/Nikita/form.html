@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.16.0/dist/sweetalert2.min.css" rel="stylesheet">
+</head>
+<body class="bg-dark d-flex justify-content-center align-items-center vh-100">
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6 col-lg-4"> 
+                <form class="p-4 bg-secondary rounded shadow">
+                    <h3 class="text-light text-center mb-4">User Form</h3>
+                    
+                    <label for="first_name" class="form-label text-light">First Name</label>
+                    <input type="text" class="form-control mb-3" id="first_name" placeholder="Enter first name">
+                    
+                    <label for="last_name" class="form-label text-light">Last Name</label>
+                    <input type="text" class="form-control mb-3" id="last_name" placeholder="Enter last name">
+                    
+                    <label for="age" class="form-label text-light">Age</label>
+                    <input type="number" class="form-control mb-3" id="age" placeholder="Enter age">
+                    
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-between">
+                        <button class="btn btn-primary w-100 w-md-auto" id="fetch_Btn">Fetch</button>
+                        <button class="btn btn-primary w-100 w-md-auto" id="jquery_Btn" type="button">jQuery</button>
+                        <button class="btn btn-primary w-100 w-md-auto" id="ajax_Btn">AJAX</button>
+                    </div>
+                </form>
+
+                
+                <div id="displayContainer" class="mt-4 text-light bg-secondary p-2 rounded">Response </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="form.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+</body>
+</html>
