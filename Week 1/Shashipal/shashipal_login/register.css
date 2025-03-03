@@ -1,0 +1,123 @@
+* {
+  font-family: "Roboto", serif;
+}
+
+body {
+  background-color: #efefef;
+}
+
+.container {
+  width: 60%;
+  margin: auto;
+  background-color: #ffff;
+  border-radius: 15px;
+}
+
+.main {
+  width: 60%;
+  margin: 36px auto;
+  padding: 24px 0;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 500;
+}
+
+h1 + p {
+  text-align: center;
+  color: #a0a0a0;
+  font-weight: 400;
+}
+
+form {
+  width: 80%;
+  margin: auto;
+  position: relative;
+}
+label {
+  font-weight: 450;
+}
+
+.input {
+  padding: 10px;
+  border: 0;
+  margin: 3px 0px 15px;
+  background-color: #e4e4e4;
+  border-radius: 10px;
+  width: 90%;
+}
+
+input:focus {
+  outline: none;
+}
+
+.radio_button {
+  border: 1px solid #a0a0a0;
+  display: inline-block;
+  padding: 10px;
+  margin: 8px 10px 24px 0;
+  border-radius: 5px;
+}
+
+.register_button {
+  color: white;
+  border: none;
+  background-color: black;
+  width: 100%;
+  padding: 15px;
+  border-radius: 25px;
+}
+
+.register_button + p {
+  text-align: center;
+}
+
+.register_button + p::before {
+  content: "";
+  position: absolute;
+  border: 1px solid #a0a0a0;
+  width: 33%;
+  bottom: 98px;
+  left: 0px;
+  border-bottom-style: none;
+}
+
+.register_button + p::after {
+  content: "";
+  position: absolute;
+  border: 1px solid #a0a0a0;
+  width: 33%;
+  bottom: 98px;
+  right: 0px;
+  border-bottom-style: none;
+}
+
+.auth_buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.auth {
+  border: none;
+  background-color: #cecece;
+  padding: 10px;
+  width: 40%;
+  font-weight: 500;
+  border-radius: 20px;
+}
+i {
+  font-size: large;
+  margin-right: 5px;
+}
+
+.auth_buttons + p {
+  color: #a0a0a0;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
