@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    
+}
+hr{
+    width: 70%;
+    margin: auto;
+}
+#name{
+    font-size: 34px;
+    text-align: center;
+    margin-top: 25px;
+    color: rgb(136, 84, 136);
+}
+.details{
+    font-size: 20px;
+    
+}
+.details ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.details ul li {
+    padding: 20px;
+    list-style-type: none;
+    
+}
+.details ul li a{
+    text-decoration: none;
+    color: black;
+}
+.summary{
+    width: 70%;
+    margin: auto;
+    padding: 15px;
+    
+}
+.summary h3{
+    font-size: 30px;
+    padding: 10px;
+    color: rgb(136, 84, 136);
+}
+.summary p{
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+
+.skills{
+    width: 70%;
+    margin: auto;
+}
+.skills h3{
+    font-size: 30px;
+    padding: 10px;
+    color: rgb(136, 84, 136);
+}
+.skills ul{
+    font-size: 20px;
+    margin-left: 20px;
+    padding-bottom: 5px;
+}
+.skills ul li{
+    padding: 5px;
+}
+.projects {
+    width: 70%;
+    margin: auto;
+    padding: 10px;
+}
+.projects h3{
+ font-size: 30px;
+ padding-bottom: 10px;
+ color: rgb(136, 84, 136);
+}
+.projects .PnameAndDate{
+ font-size: 20px;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+}
+.PnameAndDate h4{
+    font-size: 21px;
+}
+#content{
+    font-size: 20px;
+    padding: 5px;
+}
+.certificates{
+    width: 70%;
+    margin: auto;
+    padding: 10px;
+
+}
+.certificates h3{
+    font-size: 30px;
+    color: rgb(136, 84, 136);
+}
+.certificates dl {
+    font-size: 22px;
+    padding: 10px;
+}
+.certificates dl dd{
+    padding: 5px;
+    font-size: 21px;
+}
+.certificates dl dd a{
+    text-decoration: none;
+}
+.education{
+    width: 70%;
+    margin: auto;
+    padding: 10px;
+}
+.education h3{
+    font-size: 30px;
+    padding-bottom: 5px;
+    color: rgb(136, 84, 136);
+
+}
+.education h4{
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+.education p{
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+
+.edu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
