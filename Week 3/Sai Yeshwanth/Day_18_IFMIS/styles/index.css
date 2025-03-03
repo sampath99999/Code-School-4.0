@@ -1,0 +1,96 @@
+.transbox {
+  background-color: rgba(77, 98, 117, 1);
+  color: white;
+}
+
+.bg-image {
+  background-image: url(../images/header-bg.jpg);
+}
+
+h5.p-3 {
+  padding: 0.8rem !important;
+}
+
+.row:nth-child(even) {
+  background-color: rgba(159, 159, 159, 0.07);
+}
+
+.row:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.custom-row-bg {
+  background-color: rgba(159, 159, 159, 0.07) !important;
+}
+
+.form-select {
+  border: 1px solid #ccc;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(159, 159, 159, 0.09) 50%
+  );
+  padding: 3px 12px;
+  /* background-image: url(../images/ifmis-logo.png);
+  background-size: 10px; */
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="date"] {
+  padding-right: 1px;
+}
+
+.add-btn {
+  background-color: rgb(92, 183, 94);
+}
+
+.create-btn {
+  background-color: rgb(16, 53, 79);
+  color: white;
+}
+
+.create-btn:hover {
+  background-color: var(--bs-warning);
+  color: black !important;
+}
+
+/* .table-data{
+    background-color: red !important;
+    justify-content: end;
+    display: flex;
+} */
+
+.form-label {
+  margin-bottom: 0px;
+  padding-left: 6px !important;
+}
+
+body {
+  font-family: "Open Sans", sans-serif !important;
+}
+
+.card-body {
+  padding: 0px;
+}
+
+.border-bottom,
+.border-top {
+  border-color: rgb(201, 201, 201) !important;
+}
+
+.row.border-bottom {
+  border-color: rgb(194, 194, 194, 0.4) !important;
+}
+
+.navbar {
+  border-left: 0px !important;
+  border-right: 0px !important;
+  border-bottom-color: #edb3b9 !important;
+  border-top-color: #1c529a !important;
+  border-top-width: 0.5rem !important;
+}
