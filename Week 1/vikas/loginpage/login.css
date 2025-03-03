@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "TwitterChirpExtendedHeavy", "Verdana", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: black;
+}
+
+#page1 {
+  display: flex;
+  justify-content: space-around;
+}
+
+p {
+  color: #e7e9ea;
+}
+
+#mainheading {
+  font-size: 60px;
+  font-weight: 700;
+  letter-spacing: -1.2px;
+  margin-bottom: 50px;
+  word-wrap: break-word;
+  margin-top: 150px;
+  margin-bottom: 50px;
+}
+
+#Join {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 40px;
+}
+
+#confirm {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+button {
+  border-radius: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 300px;
+  background-color: azure;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+#Google-button {
+  margin-bottom: 10px;
+  outline: none;
+}
+
+#Account-button {
+  background-color: rgb(29, 155, 240);
+  color: whitesmoke;
+  padding-bottom: 10px;
+}
+
+#Account-button > a {
+  color: whitesmoke;
+  font-weight: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#Account-button:hover {
+  background-color: black;
+  text-decoration: underline;
+  color: rgb(29, 155, 240);
+  cursor: pointer;
+}
+
+#rules {
+  margin-top: 5px;
+  font-size: 11px;
+  color: #71767b;
+}
+
+#rules > a {
+  text-decoration: none;
+  color: rgb(29, 155, 240);
+}
+
+#rules > a:hover {
+  text-decoration: underline;
+}
+
+#account {
+  font-size: 17px;
+  color: #e7e9ea;
+  font-weight: 600;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+#Apple-button:hover {
+  background-color: #e5e4e2;
+  text-decoration: underline;
+}
+
+#Google-button:hover {
+  background-color: #e5e4e2;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#Signup-button {
+  background-color: black;
+  color: rgb(29, 155, 240);
+  border: 1px solid #71767b;
+  font-size: 15px;
+  font-weight: 600;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#Signup-button:hover {
+  background-color: #28282b;
+  text-decoration: underline;
+  cursor: pointer;
+}
+footer {
+  margin: 100px 0px 0px 0px;
+}
+nav {
+  padding: 12px 16px;
+}
+
+ul > li {
+  list-style-type: none;
+  padding-right: 16px;
+  margin: 4px 0px 4px 0px;
+}
+
+li:hover {
+  text-decoration: underline;
+}
+
+ul > li > a {
+  font-size: 13px;
+  text-decoration: none;
+  color: #71767b;
+}
+
+ul > li > a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+#line > hr {
+  margin: 15px 0px 5px 0px;
+  width: 290px;
+}
+
+#line {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+#line > p {
+  position: absolute;
+  bottom: 50px;
+  height: 22px;
+  left: 140px;
+  top: -11px;
+  padding: 0px 4px 0px 4px;
+  color: #71767b;
+  background-color: black;
+  margin-bottom: 5px;
+}
+
+#Logo {
+  height: 300px;
+  width: 300px;
+  margin-top: 200px;
+  margin-bottom: 30px;
+}
+
+i {
+  margin: 5px;
+}
