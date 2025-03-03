@@ -1,0 +1,64 @@
+main {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(200, 209, 209);
+}
+
+.container {
+    height: 70vh;
+    width: 70%;
+    display: flex;
+    align-items: center;/*Centers content vertically y-axis*/
+    justify-content: center;/* Centers content horizontally x-axis*/
+
+}
+
+.login-form {
+    height: 70vh;
+    width: 30%;
+    background-color: azure;
+    background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+    /*if want to apply shadow top and down*/
+   /* box-shadow: 10px 10px 5px rgb(164, 180, 185) inset, 10px 10px 5px rgb(164, 180, 185);*/
+    box-shadow: 10px 10px 5px rgb(164, 180, 185);/*right buttom*/
+   /* box-shadow: 10px 10px 5px rgb(164, 180, 185) inset; for top right*/
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input {
+    height: 40px;
+    border-radius: 5px;
+    padding-left: 10px;
+    border: none;
+    background-color: white;
+}
+
+form input::placeholder {
+    font-size: 12px;
+}
+
+button {
+    width: 100%;
+    background-color: rgb(51, 157, 176);
+    color: white;
+    border: none;
+    font-weight: bold;
+  
+}
+
+button:hover {
+    background-color: white;
+    color: teal;
+    font-weight: bold;
+}
+
+.sign-up {
+    text-decoration: none;
+    color: rgb(51, 157, 176);
+}
