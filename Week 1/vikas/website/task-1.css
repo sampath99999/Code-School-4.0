@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins, sans-serif;
+  font-size: 16px;
+}
+
+.btn-teal {
+  background-color: #6bb7be;
+  color: white;
+  border: none;
+}
+.btn-teal:hover {
+  background-color: #f9fafa;
+  color: #6bb7be;
+  border: 1px solid var#6bb7be;
+}
+
+.btn-orange {
+  background-color: #f89646;
+  color: white;
+  border: none;
+}
+
+.btn-orange:hover {
+  background-color: #f9fafa;
+  color: #f89646;
+  border: 1px solid #f89646;
+}
+
+.carousel-item {
+  height: auto !important;
+}
+
+.text-teal {
+  color: #6bb7be;
+  text-decoration: none;
+}
+.card {
+  background-color: #f7fafa;
+  border: none;
+}
+.border-teal {
+  border: 10px solid #6bb7be;
+}
+.border-thin-teal {
+  border: 1px solid #6bb7be;
+}
+
+.map {
+  height: 100%;
+}
