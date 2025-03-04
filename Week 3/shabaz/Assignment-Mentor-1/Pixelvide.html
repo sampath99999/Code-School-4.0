@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pixelvide</title>
+    <link rel="icon" href="./Images/loader.webp" type="image/x-icon" />
+    <link rel="stylesheet" href="./pixlevide.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <header id="pop-top">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="./Images/logo_huge.webp" alt="Pixelvide Logo" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Smart Governance</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Technologies</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./careers.html" id="careerLink">Careers</a>
+              </li>
+              <li>
+                <a href="#" class="btn btn-dark me-3">Contact us</a>
+              </li>
+            </ul>
+            <div class="d-flex align-items-center">
+              <a href="#" class="btn btn-codeschool">Codeschool 4</a>
+              <div class="social-icons d-none d-lg-flex">
+                <a href="#"
+                  ><i class="fab fa-twitter"></i
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    style="fill: rgba(0, 0, 0, 1); transform: ; msfilter: "
+                  >
+                    <path
+                      d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h8.615v-6.96h-2.338v-2.725h2.338v-2c0-2.325 1.42-3.592 3.5-3.592.699-.002 1.399.034 2.095.107v2.42h-1.435c-1.128 0-1.348.538-1.348 1.325v1.735h2.697l-.35 2.725h-2.348V21H20a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1z"
+                    ></path></svg
+                ></a>
+                <a href="#"
+                  ><i class="fab fa-twitter"></i
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    style="fill: rgba(0, 0, 0, 1)"
+                  >
+                    <path
+                      d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 0 0 5.001-1.721 4.036 4.036 0 0 1-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 0 1-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 0 1-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 0 0 8.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 0 1 4.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 0 0 2.556-.973 4.02 4.02 0 0 1-1.771 2.22 8.073 8.073 0 0 0 2.319-.624 8.645 8.645 0 0 1-2.019 2.083z"
+                    ></path></svg
+                ></a>
+                <a href="#"
+                  ><i class="fab fa-linkedin"></i
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    style="fill: rgba(0, 0, 0, 1)"
+                  >
+                    <path
+                      d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.339 18.337H5.667v-8.59h2.672v8.59zM7.003 8.574a1.548 1.548 0 1 1 0-3.096 1.548 1.548 0 0 1 0 3.096zm11.335 9.763h-2.669V14.16c0-.996-.018-2.277-1.388-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248h-2.667v-8.59h2.56v1.174h.037c.355-.675 1.227-1.387 2.524-1.387 2.704 0 3.203 1.778 3.203 4.092v4.71z"
+                    ></path></svg
+                ></a>
+                <a href="#"
+                  ><i class="fab fa-instagram"></i
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    style="fill: rgba(0, 0, 0, 1)"
+                  >
+                    <path
+                      d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z"
+                    ></path>
+                    <circle cx="16.806" cy="7.207" r="1.078"></circle>
+                    <path
+                      d="M20.533 6.111A4.605 4.605 0 0 0 17.9 3.479a6.606 6.606 0 0 0-2.186-.42c-.963-.042-1.268-.054-3.71-.054s-2.755 0-3.71.054a6.554 6.554 0 0 0-2.184.42 4.6 4.6 0 0 0-2.633 2.632 6.585 6.585 0 0 0-.419 2.186c-.043.962-.056 1.267-.056 3.71 0 2.442 0 2.753.056 3.71.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.042 1.268.055 3.71.055s2.755 0 3.71-.055a6.615 6.615 0 0 0 2.186-.419 4.613 4.613 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.186.043-.962.056-1.267.056-3.71s0-2.753-.056-3.71a6.581 6.581 0 0 0-.421-2.217zm-1.218 9.532a5.043 5.043 0 0 1-.311 1.688 2.987 2.987 0 0 1-1.712 1.711 4.985 4.985 0 0 1-1.67.311c-.95.044-1.218.055-3.654.055-2.438 0-2.687 0-3.655-.055a4.96 4.96 0 0 1-1.669-.311 2.985 2.985 0 0 1-1.719-1.711 5.08 5.08 0 0 1-.311-1.669c-.043-.95-.053-1.218-.053-3.654 0-2.437 0-2.686.053-3.655a5.038 5.038 0 0 1 .311-1.687c.305-.789.93-1.41 1.719-1.712a5.01 5.01 0 0 1 1.669-.311c.951-.043 1.218-.055 3.655-.055s2.687 0 3.654.055a4.96 4.96 0 0 1 1.67.311 2.991 2.991 0 0 1 1.712 1.712 5.08 5.08 0 0 1 .311 1.669c.043.951.054 1.218.054 3.655 0 2.436 0 2.698-.043 3.654h-.011z"
+                    ></path></svg
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- <div id="careerPage"></div> -->
+      <section class="hero-section">
+        <div class="container">
+          <div class="hero-content">
+            <h4 class="hero-title mt-5">
+              We help governments achieve the impossible
+            </h4>
+            <p class="hero-description">
+              We find solutions to problems using technology at the core helping
+              governments function more efficiently, effectively and
+              transparently.
+            </p>
+          </div>
+        </div>
+        <img
+          src="./Images/SLIDER-1.webp"
+          alt="Government Building"
+          class="hero-image"
+        />
+      </section>
+
+      <section id="what-we-do">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="governance">
+                <p>
+                  We are a smart governance company empowering central and local
+                  government decision makers by providing dynamic technology
+                  solutions to enhance state machinery. We play key roles in
+                  administration planning by developing and implementing
+                  colossal smart governance projects for better public
+                  administration. Our entire approach is encircled in delivering
+                  high quality, cost effective, and seamless implementation of
+                  digital transformation programmes for facilitating sustainable
+                  governance.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 text-center m-5">
+              <div>
+                <h4>What We Do?</h4>
+                <div class="border-line center"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <!-- FIRST -->
+            <div class="col-md-12">
+              <div class="blog-list">
+                <div class="blog-side-img">
+                  <div class="img-text">
+                    <div>
+                      <img src="./Images/quote-left.svg" alt="" />
+                      <h4>
+                        A lack of good FMIS results in wastage of government
+                        resources and a buildup of arrears crowding out private
+                        sector investment
+                      </h4>
+                    </div>
+                  </div>
+                  <img class="img-fluid" src="./Images/l1.webp" alt="" />
+                </div>
+                <div class="blog-side-content">
+                  <h4>
+                    How we built one of India’s best Financial Management &
+                    Information System: A Case Study
+                  </h4>
+                  <p>
+                    Our FMIS (Financial Management and Information System) is
+                    one of the biggest softwares in the state that helps the
+                    government process & manage their entire expenditure,
+                    revenue, debt and efficiently plan their budget.
+                  </p>
+                  <a href="" class="blog-right-a">
+                    <span>Read More</span>
+                    <img src="./Images/arrow.svg" alt="" />
+                  </a>
+                </div>
+              </div>
+
+              <!-- SECOND -->
+              <div class="blog-list rev">
+                <div class="blog-side-img">
+                  <div class="img-text">
+                    <div>
+                      <img src="./Images/quote-left.svg" alt="" />
+                      <h4>
+                        Smart meters have led to 5% cut in AT&C losses, 20% rise
+                        in revenue for discoms
+                      </h4>
+                    </div>
+                  </div>
+                  <img class="img-fluid" src="./Images/l4.webp" alt="" />
+                </div>
+                <div class="blog-side-content">
+                  <h4>
+                    How we are developing smart data communication systems using
+                    IoT to automate electricity meters in India.
+                  </h4>
+                  <p>
+                    It is the way forward to achieve an efficient and reliable
+                    electricity distribution system, reduce energy costs and
+                    enable demand-side management.
+                  </p>
+                  <a href="" class="blog-right-a">
+                    <span>Read More</span>
+                    <img src="./Images/arrow.svg" alt="" />
+                  </a>
+                </div>
+              </div>
+
+              <!-- THIRD -->
+              <div class="blog-list">
+                <div class="blog-side-img">
+                  <div class="img-text">
+                    <div>
+                      <img src="./Images/quote-left.svg" alt="" />
+                      <h4>
+                        UAV Photogrammetry as an Alternative to Classic
+                        Terrestrial Surveying Techniques
+                      </h4>
+                    </div>
+                  </div>
+                  <img class="img-fluid" src="./Images/l2.webp" alt="" />
+                </div>
+                <div class="blog-side-content">
+                  <h4>
+                    How we are building an advanced land surveying system using
+                    the CORS network to aid implementation of conclusive title
+                    in India.
+                  </h4>
+                  <p>
+                    We aim to provide clear land titles and secure ownership
+                    through conclusive titleship using advanced survey
+                    techniques to achieve centimeter accuracy positioning for
+                    cadastral mapping, land information management etc.
+                  </p>
+                  <a href="" class="blog-right-a">
+                    <span>Read More</span>
+                    <img src="./Images/arrow.svg" alt="" />
+                  </a>
+                </div>
+              </div>
+
+              <!-- FOURTH -->
+              <div class="blog-list rev">
+                <div class="blog-side-img">
+                  <div class="img-text">
+                    <div>
+                      <img src="./Images/quote-left.svg" alt="" />
+                      <h4>
+                        Bangalore is now officially the world’s most traffic
+                        congested city
+                      </h4>
+                    </div>
+                  </div>
+                  <img class="img-fluid" src="./Images/l3.webp" alt="" />
+                </div>
+
+                <div class="blog-side-content">
+                  <h4>
+                    How we are building an intelligent real-time traffic
+                    monitoring system for efficient traffic management in urban
+                    areas.
+                  </h4>
+                  <p>
+                    Smart traffic infrastructure is an essential component of
+                    smart city initiatives because traffic congestion is a
+                    severe issue that grows along with city development.
+                  </p>
+                  <a href="" class="blog-right-a">
+                    <span>Read More</span>
+                    <img src="./Images/arrow.svg" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="governance-section govt-background">
+        <div class="container">
+          <div
+            class="row d-flex align-items-center justify-content-center text-center"
+          >
+            <div class="col-md-9 f-60">
+              <h3>Smart Governance</h3>
+              <div class="border-line center"></div>
+              <p>
+                Over the years we have worked with many governments and helped
+                them embrace innovation in ways that were never imagined, and it
+                was only possible because of the smart and innovative
+                technologies and methods that we could bring in. After careful
+                deliberation, we coined the term “Smart Governance” which
+                identifies our work in the governance space.
+              </p>
+              <a class="btn-govt" href="">Read More</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="news-section">
+        <div class="container news-container">
+          <div class="cmmi-box">
+            <div class="cmmi-title">
+              <h1>Pixlevide is now a CMMI Level 3 company</h1>
+              <div>
+                <img src="./Images/logo-cmmi.png" alt="" />
+                <img src="./Images/logo-level-3.png" alt="" />
+              </div>
+            </div>
+            <div class="cmmi-content">
+              <p class="text-center p-3">
+                This certification reflects our commitment to quality,
+                continuous improvement, and dedication to customers. Our
+                accomplishment of achieving CMMI Level 3 highlights the
+                continued growth of Pixelvide in the changing tech world.
+                Coupled with our ISO 9001:2015 certification, Pixelvide
+                continues to emphasize quality and provide excellence in
+                solution delivery to our clients.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- News-section -->
+        <div class="row w-75 mx-auto mt-5">
+          <div class="d-flex align-items-center justify-content-around p-4">
+            <h2 class="fw-lighter">In The News</h2>
+            <div class="top-line"></div>
+          </div>
+          <div class="col-12 col-md-4 mt-sm-2 mb-4 mb-md-0">
+            <div class="card">
+              <img
+                src="./Images/Blog/blog-3-c.png"
+                class="card-img-top"
+                alt="..."
+                height="235px"
+              />
+              <div class="card-body mt-2">
+                <h5 class="card-title text-light fw-bold">YOURSTORY</h5>
+                <a href="" class="text-secondary text-decoration-none"
+                  >Source: www.yourstory.in</a
+                >
+                <p class="card-text">
+                  Leading Hi-Tech Companies to watch: featuring
+                  Pixelvide-Facilitating.
+                </p>
+                <a href="#" class="text-decoration-none">Continue Reading</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4 mt-sm-2 mb-4 mb-md-0">
+            <div class="card">
+              <img
+                src="./Images/Blog/blog1.png"
+                class="card-img-top"
+                alt="..."
+                height="235px"
+              />
+              <div class="card-body mt-2">
+                <h5 class="card-title text-danger fw-bold">YOURSTORY</h5>
+                <a href="" class="text-secondary text-decoration-none"
+                  >Source: www.yourstory.in</a
+                >
+                <p class="card-text">
+                  From a team of 5 to a workforce of over 100, this GovTech
+                  startup from Hyderabad is re..
+                </p>
+                <a href="#" class="text-decoration-none">Continue Reading</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="card">
+              <img
+                src="./Images/Blog/blog2.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title text-danger fw-bold">CIOReviewIndia</h5>
+                <a href="" class="text-secondary text-decoration-none"
+                  >Source: www.cioreviewindia.in</a
+                >
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="text-decoration-none">Continue Reading</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- table -->
+      <section class="p-5 profile">
+        <div class="container text-center">
+          <div class="row m-4 details-box">
+            <div class="col p-1 vertical-line">
+              <img
+                src="./Images/profile/1.webp"
+                alt=""
+                class="p-1"
+                height="150px"
+                width="150px"
+              />
+            </div>
+            <div class="col vertical-next-line" style="align-content: center">
+              Prathyush <br />
+              CEO & Founder
+            </div>
+            <div class="col" style="align-content: center">
+              <button type="button" class="view-btn">View More..</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="container text-center">
+          <div class="row m-4 details-box">
+            <div class="col p-1 vertical-line">
+              <img
+                src="./Images/profile/2.webp"
+                alt=""
+                class="p-1"
+                height="150px"
+                width="150px"
+              />
+            </div>
+            <div class="col vertical-next-line" style="align-content: center">
+              Yogesh <br />
+              CTO
+            </div>
+            <div class="col" style="align-content: center">
+              <button type="button" class="view-btn">View More..</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="container text-center">
+          <div class="row m-4 details-box">
+            <div class="col p-1 vertical-line">
+              <img
+                src="./Images/profile/3.webp"
+                alt=""
+                class="p-1"
+                height="150px"
+                width="150px"
+              />
+            </div>
+            <div class="col vertical-next-line" style="align-content: center">
+              Rohith <br />
+              AVP
+            </div>
+            <div class="col" style="align-content: center">
+              <button type="button" class="view-btn">View More..</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="container text-center">
+          <div class="row m-4 details-box">
+            <div class="col p-1 vertical-line">
+              <img
+                src="./Images/profile/4.webp"
+                alt=""
+                class="p-1"
+                height="150px"
+                width="150px"
+              />
+            </div>
+            <div class="col vertical-next-line" style="align-content: center">
+              Narasimha <br />
+              SR. GENERAL MANAGER
+            </div>
+            <div class="col" style="align-content: center">
+              <button type="button" class="view-btn">View More..</button>
+            </div>
+          </div>
+        </div>
+        <div class="container text-center">
+          <div class="row m-4 details-box">
+            <div class="col p-1 vertical-line">
+              <img
+                src="./Images/profile/5.webp"
+                alt=""
+                class="p-1"
+                height="150px"
+                width="150px"
+              />
+            </div>
+            <div class="col vertical-next-line" style="align-content: center">
+              Praneeth <br />
+              VP TECH
+            </div>
+            <div class="col" style="align-content: center">
+              <button type="button" class="view-btn">View More..</button>
+            </div>
+          </div>
+        </div>
+        <div class="container text-center">
+          <div class="row m-4 details-box">
+            <div class="col p-1 vertical-line">
+              <img
+                src="./Images/profile/Prakash.jpg"
+                alt=""
+                class="p-1"
+                height="150px"
+                width="150px"
+              />
+            </div>
+            <div class="col vertical-next-line" style="align-content: center">
+              Prakash Sah <br />
+              TECH LEAD
+            </div>
+            <div class="col" style="align-content: center">
+              <button type="button" class="view-btn">View More..</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Bootstrap Modal -->
+      <div
+        class="modal fade"
+        id="memberModal"
+        tabindex="-1"
+        aria-labelledby="memberModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="memberModalLabel"></h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body text-center">
+              <img src="" alt="Member Image" class="img-fluid rounded" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-3 f-1">
+              <div class="footer-logo">
+                <img class="f1" src="./Images/f-logo-1.png" alt="" />
+                <img class="f2" src="./Images/f-logo-2.png" alt="" />
+              </div>
+            </div>
+            <div class="col-md-5 f-2">
+              <div class="visit-us">
+                <h4>Visit Us</h4>
+                <div class="line small"></div>
+                <ul>
+                  <li>
+                    <!-- svg -->
+                    <img
+                      src="./Images/location_on_25dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg"
+                      alt=""
+                    />
+                    <span
+                      >New address: Plot no 116, prashanthi hills <br />
+                      khajaguda, raidurg - 500008</span
+                    >
+                    <!-- <div></div> -->
+                    <span
+                      >Plot # 250-A, Road # 12, Prashasan Nagar <br />
+                      Jubilee Hills, Hyderabad India - 500033</span
+                    >
+                  </li>
+                  <li>
+                    <!-- svg -->
+                    <img
+                      src="./Images/mail_25dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg"
+                      alt=""
+                    />
+                    <span>info@pixlevide.com</span>
+                  </li>
+                </ul>
+                <ul class="social">
+                  <li>
+                    <a href=""
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        style="fill: rgba(0, 0, 0, 1); transform: ; msfilter: "
+                      >
+                        <path
+                          d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h8.615v-6.96h-2.338v-2.725h2.338v-2c0-2.325 1.42-3.592 3.5-3.592.699-.002 1.399.034 2.095.107v2.42h-1.435c-1.128 0-1.348.538-1.348 1.325v1.735h2.697l-.35 2.725h-2.348V21H20a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1z"
+                        ></path></svg
+                    ></a>
+                  </li>
+                  <li>
+                    <a href=""
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        style="fill: rgba(0, 0, 0, 1); transform: ; msfilter: "
+                      >
+                        <path
+                          d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 0 0 5.001-1.721 4.036 4.036 0 0 1-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 0 1-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 0 1-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 0 0 8.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 0 1 4.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 0 0 2.556-.973 4.02 4.02 0 0 1-1.771 2.22 8.073 8.073 0 0 0 2.319-.624 8.645 8.645 0 0 1-2.019 2.083z"
+                        ></path></svg
+                    ></a>
+                  </li>
+                  <li>
+                    <a href=""
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        style="fill: rgba(0, 0, 0, 1); transform: ; msfilter: "
+                      >
+                        <path
+                          d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.339 18.337H5.667v-8.59h2.672v8.59zM7.003 8.574a1.548 1.548 0 1 1 0-3.096 1.548 1.548 0 0 1 0 3.096zm11.335 9.763h-2.669V14.16c0-.996-.018-2.277-1.388-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248h-2.667v-8.59h2.56v1.174h.037c.355-.675 1.227-1.387 2.524-1.387 2.704 0 3.203 1.778 3.203 4.092v4.71z"
+                        ></path></svg
+                    ></a>
+                  </li>
+                  <li>
+                    <a href=""
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        style="fill: rgba(0, 0, 0, 1); transform: ; msfilter: "
+                      >
+                        <path
+                          d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z"
+                        ></path>
+                        <circle cx="16.806" cy="7.207" r="1.078"></circle>
+                        <path
+                          d="M20.533 6.111A4.605 4.605 0 0 0 17.9 3.479a6.606 6.606 0 0 0-2.186-.42c-.963-.042-1.268-.054-3.71-.054s-2.755 0-3.71.054a6.554 6.554 0 0 0-2.184.42 4.6 4.6 0 0 0-2.633 2.632 6.585 6.585 0 0 0-.419 2.186c-.043.962-.056 1.267-.056 3.71 0 2.442 0 2.753.056 3.71.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.042 1.268.055 3.71.055s2.755 0 3.71-.055a6.615 6.615 0 0 0 2.186-.419 4.613 4.613 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.186.043-.962.056-1.267.056-3.71s0-2.753-.056-3.71a6.581 6.581 0 0 0-.421-2.217zm-1.218 9.532a5.043 5.043 0 0 1-.311 1.688 2.987 2.987 0 0 1-1.712 1.711 4.985 4.985 0 0 1-1.67.311c-.95.044-1.218.055-3.654.055-2.438 0-2.687 0-3.655-.055a4.96 4.96 0 0 1-1.669-.311 2.985 2.985 0 0 1-1.719-1.711 5.08 5.08 0 0 1-.311-1.669c-.043-.95-.053-1.218-.053-3.654 0-2.437 0-2.686.053-3.655a5.038 5.038 0 0 1 .311-1.687c.305-.789.93-1.41 1.719-1.712a5.01 5.01 0 0 1 1.669-.311c.951-.043 1.218-.055 3.655-.055s2.687 0 3.654.055a4.96 4.96 0 0 1 1.67.311 2.991 2.991 0 0 1 1.712 1.712 5.08 5.08 0 0 1 .311 1.669c.043.951.054 1.218.054 3.655 0 2.436 0 2.698-.043 3.654h-.011z"
+                        ></path></svg
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4 f-3">
+              <div class="quick-links">
+                <h4>Quick Links</h4>
+                <div class="line small"></div>
+                <ul>
+                  <li><a href="">Home</a></li>
+                  <li><a href="">Technologies</a></li>
+                  <li><a href="">About Us</a></li>
+                  <li><a href="">Smart Governance</a></li>
+                  <li><a href="">Blog</a></li>
+                  <li><a href="">Careers</a></li>
+                  <li><a href="">Contact Us</a></li>
+                  <li><a href="">Codeschool 4</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lower-footer">
+          Copyright 2021 © Pixelvide Design Solutions LLP. All rights reserved.
+        </div>
+        <button class="to-top fw-bolder fs-6" type="button">
+          <a href="#pop-top"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-chevron-up"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708z"
+              /></svg
+          ></a>
+        </button>
+      </footer>
+    </header>
+
+    
+
+    <script src="./pixelvide.js"></script>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body{
+    overflow: hidden;
+}
+.register-img{
+    /* object-fit: cover !important; */
+    /* border-radius: 20px; */
+    
+}
+.first-box{
+    border: 2px solid ;
+    border-radius: 20px;
+}

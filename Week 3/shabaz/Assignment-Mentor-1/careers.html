@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pixelvide</title>
+    <link rel="icon" href="./Images/loader.webp" type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./careers.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body class="company-section-bg">
+    <div class="d-flex justify-content-around p-3 nav-bg">
+      <div>
+        <img
+          src="./Images/logo_huge.webp"
+          alt=""
+          height="70px"
+          width="140px"
+          class="top-0"
+        />
+      </div>
+      <ul
+        class="nav nav-pills mb-3 align-content-center"
+        id="pills-tab"
+        role="tablist"
+      >
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active nav-btn"
+            id="pills-abt-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-abt"
+            type="button"
+            role="tab"
+            aria-controls="pills-aboutTeam"
+            aria-selected="false"
+          >
+            About Team
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link nav-btn"
+            id="pills-apply-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-apply"
+            type="button"
+            role="tab"
+            aria-controls="pills-apply"
+            aria-selected="false"
+          >
+            Apply
+          </button>
+        </li>
+        <!-- <li class="nav-item" role="presentation">
+          <button
+            class="nav-link nav-btn"
+            id="pills-addNew-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-addNew"
+            type="button"
+            role="tab"
+            aria-controls="pills-addNew"
+            aria-selected="false"
+          >
+            Add New Job
+          </button>
+        </li> -->
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link nav-btn"
+            id="pills-contactUs-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-contactUs"
+            type="button"
+            role="tab"
+            aria-controls="pills-contactUs"
+            aria-selected="false"
+          >
+            Contact Us
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link nav-btn"
+            id="pills-overView-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-overView"
+            type="button"
+            role="tab"
+            aria-controls="pills-overView"
+            aria-selected="false"
+          >
+            Overview
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a href="./Pixelvide.html"
+            ><button
+              class="nav-link nav-btn"
+              id="pills-overView-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-overView"
+              type="button"
+              role="tab"
+              aria-controls="pills-overView"
+              aria-selected="false"
+            >
+              Go Back
+            </button></a
+          >
+        </li>
+      </ul>
+      <div class="align-content-center">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="36"
+          height="36"
+          fill="currentColor"
+          class="bi bi-person-add"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4"
+          />
+          <path
+            d="M8.256 14a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1z"
+          />
+        </svg>
+      </div>
+    </div>
+    <div class="tab-content container" id="pills-tabContent">
+      <div
+        class="tab-pane fade show active container text-center pt-4"
+        id="pills-abt"
+        role="tabpanel"
+        aria-labelledby="pills-abt-tab"
+        tabindex="0"
+      >
+        <span>Behind the Scenes</span>
+        <h3 class="fs-1 fw-bolder">Core Team</h3>
+        <div class="border-line center"></div>
+        <div class="card-group p-5 gap-3">
+          <div class="card">
+            <img
+              src="./Images/profile/1.webp"
+              class="card-img-top"
+              alt="..."
+              height="443px"
+            />
+            <div class="card-body">
+              <h5 class="card-title text-center p-2">
+                Prathyush <br />
+                CEO & Founder
+              </h5>
+              <p class="card-text text-center p-2">
+                The indomitable leader and the captain of the ship, who is no
+                stranger to facing challenges and overcoming them with ease and
+                grace.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./Images/profile/2.webp" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title text-center p-2">
+                Yogesh <br />
+                CTO
+              </h5>
+              <p class="card-text text-center p-2">
+                Marshall of all things "tech" is involved in making all
+                tech-related decisions keeping us all up and running!
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./Images/profile/3.webp" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title text-center p-2">
+                Rohith <br />
+                AVP
+              </h5>
+              <p class="card-text text-center p-2">
+                He has been boosting the growth of Pixelvide with his wit, charm
+                and sheer intelligence!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card-group p-5 gap-3">
+          <div class="card">
+            <img src="./Images/profile/4.webp" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title text-center p-2">
+                Narasimha <br />
+                SR. GENERAL MANAGER
+              </h5>
+              <p class="card-text text-center p-2">
+                Jack of all trades and THE master at being Operations Manager at
+                Pixelvide!
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./Images/profile/5.webp" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title text-center p-2">
+                Praneeth <br />
+                VP TECH
+              </h5>
+              <p class="card-text text-center p-2">
+                A technology savant, always chasing challenges and very high
+                standards in technical showmanship!
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./Images/profile/Prakash.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title text-center p-2">
+                Prakash Sah <br />
+                TECH LEAD
+              </h5>
+              <p class="card-text text-center p-2">
+                Tech wizard with a quirky charm, seamlessly balancing his
+                passion for cricket and cutting-edge code!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="tab-pane fade "
+        id="pills-apply"
+        role="tabpanel"
+        aria-labelledby="pills-apply-tab"
+        tabindex="0"
+      >
+        <h4 class="text-center fw-bold p-2">Apply Here</h4>
+        <div class="border-line center"></div>
+        <p class="text-center p-2">
+          This is a place to grow, learn and connect. Everything that makes you
+          who you are is welcome here.
+        </p>
+        <!-- <table class="table table-bordered text-center">
+                <thead class="table-dark">
+                  <tr >
+                    <th scope="col">S.No</th>
+                    <th scope="col">Job Id</th>
+                    <th scope="col">Role</th>
+                    <th scope="col">Skills</th>
+                    <th scope="col">Status</th>
+                  </tr>
+                </thead>
+                <tbody class="table-primary">
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>1001</td>
+                    <td>Frontend Developer</td>
+                    <td>HTML,CSS,JavaScript and Bootstrap</td>
+                    <td><button class="btn btn-success">Apply</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>1002</td>
+                    <td>Senior Developer</td>
+                    <td>Problem Solving,Technical,Soft Skills and DataBase</td>
+                    <td><button class="btn btn-success">Apply</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>1003</td>
+                    <td>Software Engineer(Java)</td>
+                    <td>Java,Core-Java,Adv-Java,SpringBoot and DataBase</td>
+                    <td><button class="btn btn-success">Apply</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>1004</td>
+                    <td>Software Testing</td>
+                    <td>Manual testing,Automation testing,Agile testing and SDLC</td>
+                    <td><button class="btn btn-success">Apply</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>1005</td>
+                    <td>DevOps</td>
+                    <td>Linux fundamentals,Continuous integration,Scripting and 
+                        Automation </td>
+                    <td><button class="btn btn-success">Apply</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>1006</td>
+                    <td>Analyst</td>
+                    <td>Data visualization,Problem solving and Collaboration</td>
+                    <td><button class="btn btn-success">Apply</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td>1007</td>
+                    <td>Backed Developer</td>
+                    <td>Java/Python/Php,Version control systems and CI/CD pipelines</td>
+                    <td><button class="btn btn-success">Apply</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">8</th>
+                    <td>1008</td>
+                    <td>Business Analyst</td>
+                    <td>Analytical thinking,Communication and Data analysis</td>
+                    <td><button class="btn btn-success">Apply</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">9</th>
+                    <td>1009</td>
+                    <td>Digital Marketing</td>
+                    <td>Email marketing,Content marketing,
+                        Advertising and 
+                        Social media</td>
+                    <td><button class="btn btn-success">Apply</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">10</th>
+                    <td>1010</td>
+                    <td>Data Science</td>
+                    <td>Data visualization,Statistics,Machine learning,SQL and Natural language processing</td>
+                    <td><button class="btn btn-success">Apply</button></td>
+                  </tr>
+                </tbody>
+              </table> -->
+
+        <!-- Button trigger modal -->
+         <div class="d-flex justify-content-between p-2">
+          <div class="d-flex me-2 " role="search" >
+            <input class="form-control me-2" type="search" placeholder="Search for Job" aria-label="Search" id="filter-inp">
+            <button class="btn btn-primary" type="submit" id="filter-button">Search</button>
+          </div>
+          <button
+          type="button"
+          class="btn btn-primary d-flex justify-content-end"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          Add Job
+        </button>
+         </div>
+        
+
+        <!-- Modal -->
+        <div
+          class="modal fade modal-width "
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header modal-bg">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                  Want to Add new job??
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body body-modal-bg">
+                <form class="container">
+                  <div
+                    class="col d-flex justify-content-center flex-column gap-1"
+                  >
+                    <label for="sNO">S.No</label>
+                    <input
+                      type="sNo"
+                      name="sNo"
+                      id="sNo"
+                      placeholder="S.No"
+                      class="addInput p-2"
+                    />
+                    <p id="sNoResult" class="requried"></p>
+                    <label for="jobId">Job Id</label>
+                    <input
+                      type="jobId"
+                      name="jobId"
+                      id="jobId"
+                      placeholder="Job Id"
+                      class="addInput p-2"
+                    />
+                    <p id="jobIdResult" class="requried"></p>
+                    <label for="role">Job Role</label>
+                    <input
+                      type="jobRole"
+                      name="jobRole"
+                      id="jobRole"
+                      placeholder="Role"
+                      class="addInput p-2"
+                    />
+                    <p id="roleResult" class="requried"></p>
+                    <label for="skills">Skills</label>
+                    <input
+                      type="skills"
+                      name="skills"
+                      id="skills"
+                      placeholder="Skills"
+                      class="addInput p-2"
+                    />
+                    <p id="skillsResult" class="requried"></p>
+                    <label for="status">Status</label>
+                    <input
+                      type="status"
+                      name="status"
+                      id="status"
+                      placeholder="Status"
+                      class="addInput p-2"
+                    />
+                    <p id="statusResult" class="requried"></p>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer modal-bg">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                <button
+                  type="submit"
+                  id="addJob"
+                  class="addJobButton btn btn-primary"
+                >
+                  Add Job
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <table id="jobTable" class="table table-bordered text-center">
+          <thead class="table-dark">
+            <tr>
+              <th scope="col">S.No</th>
+              <th scope="col">Job Id</th>
+              <th scope="col">Role</th>
+              <th scope="col">Skills</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody class="table-primary" id="tableBody">
+            <!-- Data will be dynamically inserted here -->
+          </tbody>
+        </table>
+
+        <div id="message" style="text-align: center; margin-top: 20px"></div>
+      </div>
+
+      <!-- <div
+        class="tab-pane fade"
+        id="pills-addNew"
+        role="tabpanel"
+        aria-labelledby="pills-addNew-tab"
+        tabindex="0"
+      >
+        <h4 class="text-center fw-bold p-2">Want to Add new job??</h4>
+        <div class="border-line center"></div>
+        <div class="p-4 mt-4 d-flex justify-content-center">
+          <div class="row w-25">
+            
+          </div>
+        </div>
+      </div> -->
+
+      <div
+        class="tab-pane fade"
+        id="pills-contactUs"
+        role="tabpanel"
+        aria-labelledby="pills-contactUs-tab"
+        tabindex="0"
+      >
+        <div
+          class="container d-flex justify-content-center align-items-center p-5"
+        >
+          <div class="row border rounded-5 p-3 bg-white shadow box-area">
+            <div
+              class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box"
+              style="background: #103cbe"
+            >
+              <div class="featured-image mb-3 p-2">
+                <img
+                  src="./Images/ContactUs.png"
+                  class="img-fluid"
+                  style="width: 250px; border-radius: 8px"
+                />
+              </div>
+              <p
+                class="text-white fs-2"
+                style="
+                  font-family: 'Courier New', Courier, monospace;
+                  font-weight: 600;
+                "
+              >
+                Any Query??
+              </p>
+              <small
+                class="text-white text-wrap text-center"
+                style="
+                  width: 17rem;
+                  font-family: 'Courier New', Courier, monospace;
+                "
+                >Join Experienced Developer on this planet.</small
+              >
+            </div>
+            <div class="col-md-6 right-box">
+              <div class="row align-items-center">
+                <div class="header-item mb-4">
+                  <h2 class="fw-bold">Contact Us</h2>
+                </div>
+                <div class="input-group mb-3">
+                  <input
+                    type="text"
+                    class="form-control form-control-lg bg-light fs-6"
+                    placeholder="Name"
+                  />
+                </div>
+                <div class="input-group mb-3">
+                  <input
+                    type="number"
+                    class="form-control form-control-lg bg-light fs-6"
+                    placeholder="Phone No"
+                  />
+                </div>
+                <div class="input-group mb-3">
+                  <input
+                    type="text"
+                    class="form-control form-control-lg bg-light fs-6"
+                    placeholder="Email address"
+                  />
+                </div>
+                <div class="input-group mb-3">
+                  <!-- <label for="message">Message</label> -->
+                  <textarea
+                    name="message"
+                    placeholder="Message"
+                    class="form-control form-control-lg bg-light fs-6"
+                  ></textarea>
+                </div>
+                <div class="input-group mb-3">
+                  <button
+                    class="btn btn-lg btn-light w-100 fs-6 contact-button"
+                    id="button-contact"
+                  >
+                    SUBMIT
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="tab-pane fade"
+        id="pills-overView"
+        role="tabpanel"
+        aria-labelledby="pills-overView-tab"
+        tabindex="0"
+      >
+        <section>
+          <div class="container d-flex justify-content-center company-section">
+            <div class="row">
+              <div class="col align-content-center">
+                <h1 class="text-center text-light fw-bold">About Company</h1>
+                <div class="border-line center"></div>
+                <div class="abt-cmny text-center text-light fs-5">
+                  <p>
+                    We are a group of socially conscious tech innovators that
+                    share the same mission to transform the government space by
+                    finding smart solutions for big challenges. Our aim is to
+                    work on problems that affect at least a million lives
+                    through the government. Be it: building the country’s finest
+                    Financial Management and Information System, or our work in
+                    traffic management and analytics, or building products in
+                    land survey to help pave the way for conclusive titleship;
+                    we are always striving to create the next breakthrough in
+                    government systems through powerful and transformative
+                    technology products.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="./career.js"></script>
+  </body>
+</html>
