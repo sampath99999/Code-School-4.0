@@ -1,0 +1,142 @@
+
+:root {
+    --secondary-color: rgb(255, 174, 0);
+    --accent-color: #6870F3;
+    --dark-bg: #212529;
+    --darker-bg: #1e204c;
+    --overlay-bg: rgba(0, 0, 0, 0.603);
+    --text-color-white: white;
+}
+
+header {
+    min-height: 90vh;
+    background-image: url('/assets/images/header.webp');
+}
+
+.nav-div {
+    border-bottom: 2px solid var(--text-color-white);
+}
+.nav-link {
+    font-size: 13px;
+}
+
+.custom-nav {
+    height: 12vh;
+}
+
+
+.custom-navbar-nav {
+    margin-left: 10px;
+}
+
+/* Quotes */
+@media (max-width: 576px) {
+    .quotes h3 { font-size: 1.2rem; }
+    .quotes p { font-size: 0.9rem; }
+}
+
+#carouselExampleControls {
+    margin-top: -40px;
+}
+
+.first-border {
+    height: 20vh;
+    width: 40px;
+    background-color: var(--secondary-color);
+    margin-left: -25px;
+}
+
+.second-border {
+    height: 20vh;
+    width: 40px;
+    background-color: var(--secondary-color);
+    margin-right: -25px;
+}
+
+/* What We Do */
+.whatWeDo{
+    background-image: url('/assets/images/textured.jpg');
+}
+.line-half {
+    width: 30px;
+    height: 3px;
+}
+
+.line-half-yellow {
+    background-color: var(--secondary-color);
+}
+
+.line-half-blue {
+    background-color: var(--accent-color);
+}
+
+/*what we Do cards*/
+.text-content {
+    background-color: var(--overlay-bg);
+} 
+
+.imgWithText, .imgWithText2 {
+    height: 350px;
+    width: 100%;  
+}
+
+
+/* img text bg */
+.text-content {
+    background-color: var(--overlay-bg);
+}
+.btn-color{
+    background-color: var(--accent-color);
+}
+.card-text-content2 {
+    position: relative; /* Ensures child elements can be positioned inside */
+}
+
+.corner-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: 50px; /* Adjust size as needed */
+    height: auto;
+    margin: 10px; /* Optional: Adds spacing from the edges */
+}
+
+/* Smart Governance */
+.smart-governance {
+    min-height: 50vh;
+    background-image: url('/assets/images/smart.webp');
+    background-size: cover;
+   
+}
+
+
+.smart-governance-btn {
+    background-color: var(--secondary-color);
+}
+
+
+/* Footer */
+.footer {
+    min-height: 50vh;
+    background-color: var(--dark-bg);
+    font-size: 12px;
+
+    
+}
+
+.footer-down {
+    background-color: var(--darker-bg);
+}
+.footer-right-link{
+    height: 30px;
+    width: 30px;
+     background-color: var(--accent-color);
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    margin-top: -10px;
+
+}
+
+
+
