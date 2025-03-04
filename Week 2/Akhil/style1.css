@@ -1,0 +1,57 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: rgb(35, 33, 33);
+}
+.sa{
+  color : white;
+}
+.sg{
+  color : white;
+}
+.background-image {
+  background-image: url('assests/serene-mountain-landscape-dawn-with-sunkissed-peaks-bathed-soft-pastel-hues-generative-ai_262708-31718.avif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.back {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+span {
+  color: rgb(255, 30, 30);
+  font-size: 12px;
+}
+#button {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+#button:hover {
+  background-color: rgb(236, 234, 234);
+  color: black;
+  border: 1px solid black;
+  opacity: 0.8;
+}
+.auth-btn {
+  background-color: rgb(58, 56, 56);
+  width: 100%;
+  max-width: 350px;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+.auth-btn img {
+  width: 25px;
+  margin-right: 10px;
+}
