@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Femme Wardrobe</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/8e95a6a194.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="navbar-placeholder"></div>
+    <!-- <div id="cartSidebar"></div> -->
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-text">
+        <h6 class="text-uppercase">Casual & Everyday</h6>
+        <h1 class="display-4 fw-bold">Effortlessly Blend Comfort & Style!</h1>
+        <p class="lead">
+          Effortlessly blend comfort and style with our Casual & Everyday
+          collection, featuring cozy sweaters, versatile denim, laid-back tees,
+          and relaxed-fit joggers for your everyday adventures.
+        </p>
+        <a href="./collections.html" class="btn btn-outline-light btn-lg"
+          >View Collection</a
+        >
+      </div>
+    </section>
+    <!-- <div class="offcanvas offcanvas-end" tabindex="-1" id="cartSidebar">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Shopping Cart</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <p>No products in the cart.</p>
+      </div>
+      <div class="cart-footer">
+        <button class="btn btn-outline-primary w-100">Continue Shopping</button>
+        <button class="btn btn-outline-dark w-100">Check Out</button>
+      </div>
+    </div> -->
+    <script>
+      $(document).ready(function () {
+        // Load Navbar
+        $("#navbar-placeholder").load("navbar.html");
+      });
+    </script>
+    
+    
+
+    <script src="./main.js"></script>
+  </body>
+</html>
