@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat</title>
+
+    <link rel="stylesheet" href="./styles/chat.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body class="bg-light">
+    <div class="container mt-3">
+      <div class="row card">
+        <div
+          class="card col-lg-12 d-flex flex-column chat-container m-0 p-0 border-0"
+        >
+          <div
+            class="bg-success text-white p-3 text-start rounded-bottom-0 rounded-top fw-bolder fs-5"
+          >
+            <img
+              src="./images/logo.jpg"
+              alt=""
+              class="user-icon rounded-circle ms-2"
+              style="
+                width: 40px;
+                height: 40px;
+                object-fit: fill;
+                border: 1px solid #ccc;
+              "
+            />
+            QuixChat
+          </div>
+
+          <div
+            class="chat-box d-flex flex-column p-3 bg-white flex-grow-1 overflow-auto"
+          ></div>
+
+          <div class="p-3 bg-input rounded-bottom border-top">
+            <div class="d-flex gap-1">
+              <input
+                type="text"
+                id="messageInput"
+                class="form-control"
+                placeholder="Type a message..."
+              />
+              <button
+                id="send"
+                class="btn btn-success p-0 pt-1 px-3"
+                type="click"
+              >
+                <i class="fa fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./scripts/chat.js"></script>
+  </body>
+</html>
