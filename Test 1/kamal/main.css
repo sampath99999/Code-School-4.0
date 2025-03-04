@@ -1,0 +1,20 @@
+#main{
+    background-color: rgb(230, 229, 227);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#sticky-sidebar{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.table-head{
+    display: flex;
+    justify-content: space-between;
+}
+.search-bar{
+    width: 50%
+}
+.icons{
+    margin-left: 90px;
+    margin-top: 20px;
+}
