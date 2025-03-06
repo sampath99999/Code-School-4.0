@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    <div class="container d-flex justify-content-center align-items-center">
+      <form id="form" class="my-5">
+        <h2 class="text-center">Registration</h2>
+
+        <label for="Username" class="form-label">Username</label><br />
+        <input
+          type="text"
+          class="form-control"
+          id="Username"
+          oninput="verifyUsername()"
+        /><br />
+        <p id="NameError" class="text-danger"></p>
+
+        <label for="Phonenumber" class="form-label">Phone number</label><br />
+        <input
+          type="number"
+          class="form-control"
+          id="Phonenumber"
+          oninput="verifyPhonenumber()"
+        /><br />
+        <p id="PhoneError" class="text-danger"></p>
+
+        <label for="Email" class="form-label">Email address</label><br />
+        <input
+          type="email"
+          class="form-control"
+          id="Email"
+          aria-describedby="emailHelp"
+          oninput="verifyEmail()"
+        /><br />
+        <p id="EmailError" class="text-danger"></p>
+
+        <label for="Password" class="form-label">Password</label><br />
+        <input
+          type="password"
+          class="form-control"
+          id="Password"
+          oninput="verifyPassword()"
+        /><br />
+        <p id="PasswordError" class="text-danger"></p>
+
+        <label for="ConfirmPassword" class="form-label">Confirm Password</label
+        ><br />
+        <input
+          type="password"
+          class="form-control"
+          id="ConfirmPassword"
+          oninput="verifyConfirmPassword()"
+        /><br />
+        <p id="ConfirmPasswordError" class="text-danger"></p>
+
+        <label for="Radio" class="form-label">Gender</label><br />
+        <div oninput="verifyGender()">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            id="RadioMale"
+          />
+          &nbsp;Male&nbsp;&nbsp;
+
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            id="RadioFemale"
+          />&nbsp;Female&nbsp;&nbsp;
+
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            id="RadioOther"
+          />&nbsp;other&nbsp;&nbsp;
+        </div>
+        <p id="GenderError" class="text-danger"></p>
+
+        <button
+          type="button"
+          class="btn w-100 bg-primary text-light mt-3"
+          onclick="validationForm()"
+        >
+          submit
+        </button>
+      </form>
+    </div>
+
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

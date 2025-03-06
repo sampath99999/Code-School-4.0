@@ -1,0 +1,38 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing:border-box ;
+}
+.navbar-brand{
+    font-size: 30px!important;
+}
+.nav-link{
+    color:black!important;
+}
+.carousel{
+    margin-bottom: 150px;
+}
+.buynowlink{
+    text-decoration: none;
+}
+#Furniture{
+    margin:100px 0;
+}
+#Furniture span,#Furniture a{
+    color:skyblue
+}
+
+#Furniture .row{
+    row-gap: 100px;
+}
+#AboutUs,#LatestBlog,#Contactus{
+    margin-bottom: 100px;
+}
+input:focus,textarea:focus{
+    outline:none;
+}
+input,textarea,.testimonial,#LatestBlog .card{
+    box-shadow: 0 0 3px 3px rgb(239, 235, 235);
+}
+
+
