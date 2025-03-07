@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output Techniques in JavaScript</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+       .box-1{
+        width: 80%;
+       }
+    </style>
+</head>
+
+<body>
+   
+    <div class="row  d-flex justify-content-center align-items-center mt-4 box-1 mx-auto">
+        <div class="col-md-4  col-12 bg-black p-3 ">
+            <form action="javascript:void(0)" >
+                <input type="text" name="" id="inputUserName" class="form-control" placeholder="User Name">
+                <input type="text" name="" id="inputEmail" class="form-control mt-2" placeholder="Email Id">
+                <input type="text" name="" id="inputDepartment" class="form-control mt-2" placeholder="Department">
+               <button class="btn btn-danger w-100 mt-2" onclick="clickHandle()">Click</button>
+            </form>
+        </div>
+        <div class="col-md-6 col-12 text-success fw-bold">
+           
+                <p id="displayUserName"></p>
+                <p id="displayUserEmail"></p>
+                <p id="displayDepartment"></p>
+          
+        </div>
+        
+      
+    </div>
+    <div>
+        <h1 id="heading1">Hello JavaScript</h1>
+    </div>
+
+<script>
+    function clickHandle(){
+        let name=document.getElementById("inputUserName").value;
+        let email=document.getElementById("inputEmail").value;
+        let department=document.getElementById("inputDepartment").value;
+        
+        document.getElementById("displayUserName").innerHTML=`User Name : ${name}`;
+        document.getElementById("displayUserEmail").innerHTML=`Email : ${email}`;
+        document.getElementById("displayDepartment").innerHTML=`Department : ${department}`;
+
+        console.log(name);
+        console.log(email);
+        console.log(department);
+       
+    }
+          let h1Value= document.getElementById("heading1");
+         
+          h1Value.innerText=h1Value.innerText+"From Hyderabad";
+          console.log(h1Value);
+
+         
+
+</script>
+   
+
+
+
+</body>
+
+</html>
