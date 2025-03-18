@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup Form</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+   
+  <form name="RegForm" id="userForm" onsubmit="validateForm(event)" onreset="resetErrors()">
+    <p>
+    <label for="firstName">First Name*</label>
+    <input type="text" id="firstName" name="firstName" placeholder="Enter Your First Name" oninput="validateFirstName()" />
+    <span id="firstName-error" class="error-message"></span>
+    </p>
+    <p>
+    <label for="lastName">Last Name*</label>
+    <input type="text" id="lastName" name="lastName" placeholder="Enter Your Last Name" oninput="validateLastName()" />
+    <span id="lastName-error" class="error-message"></span>
+    </p>
+    <p>
+    <label for="email">Email*</label>
+    <input type="text" id="email" name="email" placeholder="Enter Your Email" oninput="validateEmail()" />
+    <span id="email-error" class="error-message"></span>
+    </p>
+    <p>
+    <label for="phone">Phone*</label>
+    <input type="text" id="phone" name="phone" placeholder="Enter Your Phone" oninput="validatePhone()" />
+    <span id="phone-error" class="error-message"></span>
+    </p>
+    <p>
+    <label for="age">Age*</label>
+    <input type="number" id="age" name="age" placeholder="Enter Your Age" oninput="validateAge()" />
+    <span id="age-error" class="error-message"></span>
+    </p>
+    <p>
+      <input type="submit" value="Submit" />
+      <input type="reset" value="Reset" />
+    </p>
+    </form>
+    <script src="employe.js"></script>
+  </body>
+</html>

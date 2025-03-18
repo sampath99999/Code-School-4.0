@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+    <form name="RegForm" onsubmit="validateForm(event)" onreset="resetErrors()">
+        <h1>Hi There!!</h1>
+        <h1>Create Account</h2>
+        <div class="network">
+            <p>Join our 100% free creative network</p>
+        </div>
+        
+        <button class="google-btn">
+            <img class="img" src="icons8-google.svg" alt=""> Sign Up with Google
+        </button>
+                
+        <button class="x-btn">
+            <img class="img" src="icons8-x.svg" alt=""> Sign Up with X
+        </button>
+
+        <div class="or"><p>OR</p></div>
+
+        <p>
+            <label for="name">Name*</label>
+            <input type="text" id="name" name="name" placeholder="Enter Your Name" oninput="validateName()" />
+            <span id="name-error" class="error-message"></span>
+        </p>
+
+        <p>
+            <label for="address">Username*</label>
+            <input type="text" id="address" name="address" placeholder="Enter Your Username" oninput="validateUsername()" />
+            <span id="address-error" class="error-message"></span>
+        </p>
+
+        <p>
+            <label for="email">Email*</label>
+            <input type="text" id="email" name="email" placeholder="Enter Your Email" oninput="validateEmail()" />
+            <span id="email-error" class="error-message"></span>
+        </p>
+
+        <p>
+            <label for="dob">Date of Birth*</label>
+            <input type="date" id="dob" name="dob" onblur="validateDob()" />
+            <span id="date-error" class="error-message"></span>
+        </p>
+
+        <p>
+            <label for="password">Password*</label>
+            <input type="password" id="password" name="password" placeholder="Enter a Password" oninput="validatePassword()" />
+            <span id="password-error" class="error-message"></span>
+        </p>
+
+        <p>
+            <input type="checkbox" id="agree" name="agree" onchange="validateAgreement()" />
+            <label for="agree">I agree to the above information</label>
+            <span id="agree-error" class="error-message"></span>
+        </p>
+
+        <p>
+            <input type="submit" value="Submit" />
+            <input type="reset" value="Reset" />
+        </p>
+    </form>
+
+    <script>
+        function validateName() {
+            const name = document.getElementById("name").value;
+            const nameErr = document.getElementById("name-error");
+
+            if (name === "" || /\d/.test(name)) {
+                nameErr.textContent = "Please enter your name without numbers.";
+                return false;
+            }
+            nameErr.textContent = "";
+            return true;
+        }
+
+        function validateUsername() {
+            const username = document.getElementById("address").value;
+            const usernameErr = document.getElementById("address-error");
+
+            if (username === "") {
+                usernameErr.textContent = "Please enter your username.";
+                return false;
+            }
+            usernameErr.textContent = "";
+            return true;
+        }
+
+        function validateEmail() {
+            const email = document.getElementById("email").value;
+            const emailErr = document.getElementById("email-error");
+
+            if (email === "" || !email.includes("@") || !email.includes(".")) {
+                emailErr.textContent = "Please enter a valid email address.";
+                return false;
+            }
+            emailErr.textContent = "";
+            
+            return true;
+        }
+
+        function validateDob() {
+            const dob = document.getElementById("dob").value;
+            const dobErr = document.getElementById("date-error");
+
+            if (dob === "") {
+                dobErr.textContent = "Please enter your date of birth.";
+                return false;
+            }
+            dobErr.textContent = "";
+            return true;
+        }
+
+        function validatePassword() {
+            const pass = document.getElementById("password").value;
+            const passErr = document.getElementById("password-error");
+
+            if (pass === "" || pass.length < 6) {
+                passErr.textContent = "Please enter a password with at least 6 characters.";
+                return false;
+            }
+            passErr.textContent = "";
+            return true;
+        }
+
+        function validateAgreement() {
+            const agree = document.getElementById("agree").checked;
+            const agreeErr = document.getElementById("agree-error");
+
+            if (!agree) {
+                agreeErr.textContent = "You must agree to continue.";
+                return false;
+            }
+            agreeErr.textContent = "";
+            return true;
+        }
+
+        function validateForm(event) {
+            event.preventDefault(); 
+
+            const isNameValid = validateName();
+            const isUsernameValid = validateUsername();
+            const isEmailValid = validateEmail();
+            const isDobValid = validateDob();
+            const isPasswordValid = validatePassword();
+            const isAgreeValid = validateAgreement();
+
+            if (isNameValid && isUsernameValid && isEmailValid && isDobValid && isPasswordValid && isAgreeValid) {
+                Swal.fire({
+                    title: "Success!",
+                    text: "Your account has been created successfully.",
+                    icon: "success",
+                    confirmButtonText: "OK"
+                }).then(() => {
+                    document.RegForm.submit(); 
+                });
+            } else {
+                Swal.fire({
+                    title: "Error!",
+                    text: "Please fix the errors before submitting.",
+                    icon: "error",
+                    confirmButtonText: "OK"
+                });
+            }
+        }
+
+        function resetErrors() {
+            document.getElementById("name-error").textContent = "";
+            document.getElementById("address-error").textContent = "";
+            document.getElementById("email-error").textContent = "";
+            document.getElementById("password-error").textContent = "";
+            document.getElementById("date-error").textContent = "";
+            document.getElementById("agree-error").textContent = "";
+        }
+    </script>
+</body>
+</html>
