@@ -1,0 +1,102 @@
+.navbar {
+  border-left: 0px !important;
+  border-right: 0px !important;
+  border-bottom-color: #edb3b9 !important;
+  border-top-color: #1c529a !important;
+  border-top-width: 0.5rem !important;
+}
+
+.transbox {
+  background-color: rgba(77, 98, 117, 1);
+  color: white;
+}
+
+.bg-image {
+  background-image: url(../images/header-bg.jpg);
+}
+
+.status-btn {
+  background-color: rgb(92, 183, 94);
+}
+
+.approval-btn {
+  background-color: #f3f3f3 !important;
+}
+
+.table.custom-table tbody tr:nth-child(odd) td:nth-child(even) {
+  background-color: rgba(159, 159, 159, 0.08);
+}
+
+.table.custom-table tbody tr:nth-child(odd) td:nth-child(odd) {
+  background-color: rgba(159, 159, 159, 0.08);
+}
+
+.table tbody td {
+  padding: 6px !important;
+}
+
+.custom-table tbody tr:nth-child(even):hover td:nth-child(even) {
+  background-color: rgba(255, 255, 0, 0.714);
+}
+
+.custom-table tbody tr:nth-child(even):hover td:nth-child(odd) {
+  background-color: rgba(255, 255, 0, 0.714);
+}
+
+tr:hover {
+  background-color: rgba(255, 255, 0, 0.714);
+}
+
+.bank-section-bg {
+  background-color: rgb(233, 246, 255) !important;
+  border-color: rgb(233, 246, 255) !important;
+}
+
+.bank-details-container,
+.bank-details-container table,
+.bank-details-container td,
+.bank-details-container th {
+  background-color: var(--bank-section-bg, #eaf4ff) !important;
+}
+
+/* .blue-btn {
+  background-color: rgb(16, 53, 79);
+} */
+
+.blue-btn {
+  background-color: rgb(16, 53, 79);
+  color: white;
+}
+
+.blue-btn:hover {
+  background-color: var(--bs-warning);
+  color: black !important;
+}
+
+.table-head-bg {
+  background-color: rgb(238, 246, 255) !important;
+}
+
+.table-head-bg .blue-btn:hover {
+  color: black !important;
+}
+
+.radio-ribbon {
+  background-color: #042d62e8 !important;
+}
+
+.content-color {
+  color: #165ab4 !important;
+}
+
+.profile-header {
+  background-color: rgb(235, 246, 248) !important;
+}
+
+body {
+  font-family: "Open Sans", sans-serif !important;
+}
+
+.border-bottom {
+  border-color: rgb(201, 201, 201) !important;
+}

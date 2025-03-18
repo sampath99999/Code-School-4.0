@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+  </head>
+
+  <body>
+    <p id="mytext">click button to display response</p>
+    <button id="btn">Get</button>
+    <button id="btn1">Send</button>
+
+    <script>
+      $(document).ready(function () {
+        $("#btn").click(function () {
+          $.get("http://192.168.16.50:5000/users", function (data) {
+            $("#mytext").text(JSON.stringify(data["users"]));
+          });
+        });
+
+        $("#btn1").click(function () {
+          $.post({
+            url: "http://192.168.16.50:5000/users",
+            contentType: "application/json",
+            data: JSON.stringify({ name: "Vamshi" }),
+            success: function (response) {
+              console.log("Success:", response);
+            },
+            error: function (error) {
+              console.log("Error:", error);
+            },
+          });
+          console.log("posted");
+        });
+      });
+    </script>
+  </body>
+</html>
