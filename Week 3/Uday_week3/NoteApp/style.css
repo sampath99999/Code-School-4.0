@@ -1,0 +1,152 @@
+
+:root {
+  --blue: blue;
+  --primaryColor: #c4dfe6;
+  --secondaryColor: #66a5ad;
+  --white: white;
+  --whiteSmoke: whiteSmoke;
+  --black: black;
+  --transparent:rgba(0,0,0,0.25);
+}
+.dark-theme {
+  --blue: white;
+  --primaryColor: black;
+  --secondaryColor: black;
+  --white: black;
+  --whiteSmoke: black;
+  --black: white;
+  --transparent:rgba(255,255,255,0.25);
+}
+
+.body {
+  background: linear-gradient(
+    130deg,
+    var(--primaryColor),
+    var(--secondaryColor)
+  );
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-wrap: break-word;
+}
+
+.header-container p {
+  color: var(--black);
+  font-size: 30px;
+  text-align: center;
+}
+.header-container img {
+  background: transparent;
+  height: 50px;
+  width: 40px;
+}
+
+.add-note {
+  background-color: var(--blue);
+  color: var(--white);
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  height: 50px;
+  width: 50px;
+  border-radius: 25px !important;
+}
+.fa-plus {
+  color: var(--white);
+}
+
+.note-container {
+  border: 1px solid white;
+  color: var(--black);
+  background-color: var(--whiteSmoke);
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 23px;
+  visibility: hidden;
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+}
+
+.note-container-bg{
+  background-color:var(--transparent);
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  display: none;
+}
+
+
+.note-container input,
+.note-container textarea {
+  box-shadow: 0 0px 5px 2px rgb(163, 153, 153);
+  margin-top: 25px !important;
+  border: none;
+}
+
+ul {
+  flex-wrap: wrap;
+  list-style: none;
+  user-select: none;
+}
+.note {
+  background: #fffae3;
+  box-shadow: 0 0 5px var(--whiteSmoke);
+  padding: 15px;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  cursor: move;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+
+}
+
+.note-title {
+  max-height: 40px;
+
+}
+.inside-note {
+  max-height: 150px;
+  overflow-y: auto;
+  word-wrap: break-word;
+  scrollbar-width: none;
+}
+
+.edit {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+}
+
+.delete {
+  background-color: transparent;
+  color: red;
+  border: none;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+#search-bar {
+  outline: none;
+  width: 350px;
+}
+#theme-icon {
+  position: absolute;
+  top: 28px;
+  right: 30px;
+  height: 35px;
+  width: 35px;
+  z-index: 2;
+}
+#sun-icon {
+  visibility: hidden;
+}
