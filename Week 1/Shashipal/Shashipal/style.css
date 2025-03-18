@@ -1,0 +1,67 @@
+*{
+    margin: 0 ;
+    padding: 0;
+}
+
+body{
+    width: 70%;
+    margin: 20px auto;
+    padding: 0 20px 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px  rgba(0, 0, 0, 0.2)
+
+}
+.name{
+    text-align: center;
+    margin-top: 40px ;
+}
+.address{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.line::after{
+    content: "";
+    border: 1px solid grey;
+   margin: 0 5px;
+
+}
+.contact{
+    text-align: center;
+}
+
+.headings{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+h3{
+    margin-top: 5px;
+    color: rgb(21, 111, 156);
+}
+i{
+    margin-right: 5px;
+}
+.projects > h3,hr{
+    margin-bottom: 5px;
+}
+
+.project-details{
+    padding: 5px;
+}
+
+.headings>ul{
+    display: flex;
+    gap: 40px;
+}
+
+.indent{
+    text-indent: 30px;
+}
+
+a:visited{
+    color: #0000EE;
+}
