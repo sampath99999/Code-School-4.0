@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Details</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" rel="stylesheet">
+</head>
+<style>
+    .table th,
+    .table td {
+      white-space: nowrap;
+      padding: 1rem; 
+    }
+    #signOut{
+        background-color: rgb(214, 74, 74);
+        border: none;
+    }
+    #signOut:hover{
+        background-color: rgb(175, 173, 173);
+        color: black;
+        opacity: 0.5;
+        border: 2px solid black;
+    }
+    #addbutton{
+        background-color: aliceblue;
+        color: black;
+        border: 2px solid black;
+    }
+    #addbutton:hover{
+        background-color: rgb(230, 230, 230);
+        color: black;
+        opacity: 0.5;
+        border: 2px solid black;
+    }
+    .navbar{
+    box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5);
+    }
+     table{
+        background-color: black;
+        color: white;
+     }
+</style>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand ms-5" id="brand">
+          <img src="" width="30" height="30" class="d-inline-block align-top " id="userImg" alt="">
+        </a>
+        <button class="btn btn-primary me-5" id="signOut">Sign Out</button>
+      </nav>
+
+  <div class="container mt-5 mb-5">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h1>Employee's Info</h1>
+
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+             Filters
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#" id="dropdown-age">Age</a></li>
+              <li><a class="dropdown-item" href="#" id="dropdown-gender">Gender</a></li>
+              <li><a class="dropdown-item" href="#" id="dropdown-company">Company</a></li>
+            </ul>
+          </div>
+        
+        <div class="col-sm-4">
+            <input id="tableSearch" class="form-control" type="text" placeholder="Search..." disabled>
+        </div>
+      <button class="btn btn-primary" id="addbutton" data-bs-toggle="modal" data-bs-target="#Modal">Add Employee</button>
+
+    </div>
+    <div class="table-responsive">
+      <table id="myDataTable" class="table  table-striped" >
+        <thead class="table-light">
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">Firstname</th>
+            <th scope="col">Lastname</th>
+            <th scope="col">Maidenname</th>
+            <th scope="col">Age</th>
+            <th scope="col">Date of Birth</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Email</th>
+            <th scope="col">Username</th>
+            <th scope="col">Address</th>
+            <th scope="col">Phone</th>
+            <th scope="col">CompanyName</th>
+            <th scope="col">Department</th>
+            <th scope="col">Update</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add User</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" id="close" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="needsvalidation" novalidate>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label class="form-label" >First Name</label>
+                            <input type="text" class="form-control" id="firstName" required>
+                            <span class="errorfirstName text-danger"></span>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label" >Last Name</label>
+                            <input type="text" class="form-control" id="lastName" required>
+                            <span class="errorlastName text-danger"></span>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Maiden Name</label>
+                            <input type="text" class="form-control" id="maidenName">
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-md-4">
+                            <label class="form-label" >Age</label>
+                            <input type="number" class="form-control" id="age" required>
+                            <span class="errorage text-danger"></span>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label" >Birth Date</label>
+                            <input type="date" class="form-control" id="birthDate" required>
+                            <span class="errorbirthDate text-danger"></span>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label" >Gender</label>
+                            <select class="form-select" id="gender" required>
+                                <option value="">Select Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <span class="errorgender text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <label class="form-label" >Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                            <span class="erroremail text-danger"></span>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" >Username</label>
+                            <input type="text" class="form-control" id="username" required>
+                            <span class="errorusername text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Address</label>
+                            <input type="text" class="form-control" id="address" required>
+                            <span class="erroraddress text-danger"></span>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Phone</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                            <span class="errorphone text-danger"></span>
+
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Company Name</label>
+                            <input type="text" class="form-control" id="companyName" required>
+                            <span class="errorcompanyname text-danger"></span>
+
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Department</label>
+                            <input type="text" class="form-control" id="department" required>
+                            <span class="errordepartment text-danger"></span>
+
+                        </div>
+                    </div>
+
+                    <div class="mt-4 text-end">
+                        <button type="submit" data-bs-dismiss="" class="btn btn-success" id="submitUser">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  
+  <script src="employee.js"> </script>
+  <script src="adduser.js"> </script>
+  <script src="edit.js"> </script>
+  <script src="delete.js"> </script>
+</body>
+</html>
+
