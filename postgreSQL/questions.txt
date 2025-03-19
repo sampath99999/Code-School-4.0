@@ -1,0 +1,19 @@
+create a database "employees_management" and consider below requirements and create necessary tables to save employees details
+
+1. save employees basic details such as "empcode, firstname, lastname, doj, dob, gender, phone, working_status, designation, location
+2. empcode should be unique and 5 digit and should start with a sequence "20001"
+3. save employees salary details, ex : earnings =>(Basic Pay, House rent allowance, city compensatory allowance, dearness allowance), deductions => (professional tax, income tax)
+4. save employees transaction details (month wise salary details paid to employees)
+
+
+write pgSQL queries to display records for below questions
+1. list of employees (name, doj, dob, gender, phone, working_status, designation, location)
+2. count of employees location wise(location,employee count).
+3. count of employees designation wise (designation,employee count), 
+4. count of employees working status (working status,employee count)
+5. calculate and show all employees retirement date (empoyee code, employee_name, dob, doj, retirement_date) (if retirement ll be at age of 60)
+6. show salary break up(each salary compoment) of each employee wise.
+7. maximum, minimun salary of employee, average salary of employees of each designation.
+8. salary received by each employee for last month (employee_id, name, salary_year, salary_month, gross, deduction, net).
+9. list of employees who have not received salary for last month
+10. list of employees whos actual salary net amount not matched with net amount of salary received in last month.
