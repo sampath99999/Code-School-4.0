@@ -1,0 +1,10 @@
+--1)categories wise products
+--2)user name, user email, product ordered, total price, address
+--3)users who have ordered at least once in each month 
+--4)products that never being bought product id, product name category name
+--5)user wise and address wise data of orders for all status(shipped deliverd pending)
+--6)category wise highest sold products according to quantity
+--7)user wise data like rank of users according to money spent by each user
+--8)month wise users buied products count or their orders data 
+--9)user wise status of pending shipped and delivered counts
+--10)rank of the particular user according to the number of orders placed
