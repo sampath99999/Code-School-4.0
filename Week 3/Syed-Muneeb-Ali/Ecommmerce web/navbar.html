@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="promo-bar bg-dark text-white text-center py-2">
+      Get 25% Off This Summer Sale. Grab It Fast!!
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand mx-auto mx-lg-0" href="index.html">TULOS</a>
+
+        <!-- Toggler Button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav gap-3">
+            <li class="nav-item">
+              <a
+                class="nav-link text-dark mens-section"
+                id=""
+                href="products.html?cat=men"
+                >Men</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-dark womens-section"
+                id="women-section"
+                href="products.html?cat=women"
+                >Women</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-dark kids-section"
+                href="products.html?cat=home-decoration"
+                >Home Decoration</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right Section (Icons & Login) -->
+        <div class="d-flex gap-4 align-items-center right-nav">
+          <a href="cart.html" class="nav-icons text-dark"
+            ><i class="fa-solid fa-cart-shopping"> </i>
+            <span
+              class="position-absolute top-0 start-100 badge translate-middle rounded-pill bg-primary"
+              id="cartCount"
+              >0</span
+            >
+          </a>
+          <a href="./login.html" class="text-dark btn btn-primary" id="login"
+            >LOG IN</a
+          >
+        </div>
+      </div>
+    </nav>
+  </header>
+</body>
+</html>

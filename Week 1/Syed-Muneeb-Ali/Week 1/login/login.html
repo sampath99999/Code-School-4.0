@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- <link rel="stylesheet" href="loginstyles.css"> -->
+    <style>
+         body{
+    background-color: antiquewhite;
+    backdrop-filter: blur(degree-of-blur);
+}
+.container{
+    margin: auto;
+    width: 40%;
+    border: 3px solid rgb(25, 27, 25);
+    padding: 10px;
+    padding-top: 0px;
+    background-color: grey;
+    margin-top: 100px;
+}
+.image-container{
+    text-align: center;
+    margin: 24px 0 0px 0;
+    position: relative;
+    /* border: 1px solid black;  */
+    width: 40%;
+    left: 30%;
+
+}
+.image{
+    width: 100%;
+    border-radius: 50%;
+    /* border: 1px solid black; */
+}
+h1{
+    width: 40%;
+    font-size: 60px;
+    text-align: center;
+    margin: 0px;
+    /* border: 1px solid black; */
+    position: relative;
+    left: 30%;
+    padding-top: 0;
+}
+input[type=text], input[type=password]{
+    width: 93%;
+    color: black;
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+button{
+    background-color: #04AA6D;
+    color: white;
+    width: 101%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: none;
+}
+p{
+    font-size: 18px;
+    width: 25%;
+    margin: 2px;
+    /* border: 1px solid black; */
+}
+a{
+    color:black;
+    /* text-decoration: none; */
+
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-container">
+        <img src="png.avif" alt="avatar" class="image">
+        </div>
+        <h1 class="login">Login</h1>
+        <form action="https://register-demo.org" method="post">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="text" placeholder="Enter Password" name="psw">
+
+            <button type="submit">Login</button>
+            <p><a href="_blank">forgot Password?</a></p>
+            <p><a href="register.html">new user?</a></p>
+        </form>
+    </div>
+</body>
+</html>
