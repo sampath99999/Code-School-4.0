@@ -1,0 +1,22 @@
+1)user wise status of pending shipped and deliverd counts
+2)user wise with address and final price
+3)rank of the perticular user according to the number of orders placed with out rank function
+4)categories wise products
+5)user name, user email, product name(seperated) ordred, total price, //uesr order datails
+6)users who have ordered atleast once in each month 
+7)products that never being bought product id, product name category name
+8)user wise and address wise data of orders for all status(shipped deliverd pending)
+9)category wise higest sold products according to quantity
+10)category wise higest unsold(stock_quantity) products according to quantity
+11)user wise data like rank of users accordind to money spent by each user
+12)month wise users buied products count or theier orders data 
+----
+13)another table and another question
+    NODE parent_id 
+    1-->null(root)
+    2-->1(middle)
+    3-->1(leaf)
+    4-->2(leaf)
+    5-->2(leaf)
+
+    qustion is node and parent id will be given we need to find name of the node
