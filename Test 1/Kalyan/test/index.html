@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css\bootstrap.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+
+    <link rel="style-sheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Limelight&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins&display=swap');
+
+
+        * {
+            font-family: "Poppins", sans-serif;
+        }
+
+        .navbar-brand {
+            font-family: "Limelight", sans-serif;
+            font-weight: 400;
+            color: white;
+            font-style: normal;
+            margin-left: 5vw;
+            font-size: 30px;
+
+        }
+
+        .navbar {
+            height: 14vh;
+            background-color: rgb(69, 68, 68);
+            position: relative;
+        }
+
+        .nav-list {
+            position: absolute;
+            right: 5vw;
+        }
+
+        .nav-item {
+            color: white;
+            margin-right: 5vw;
+            text-transform: uppercase;
+        }
+
+        .head-line {
+            width: 50vw;
+            font-family: "Merriweather", serif;
+            word-spacing: 8px;
+            font-size: 28px;
+            line-height: 1.5;
+        }
+
+        .section-1 {
+            height: 50vh;
+            position: relative;
+        }
+
+        .section-2 {
+            background-color: #ececec;
+            height: auto;
+        }
+
+        .card {
+            border-radius: 0;
+            height: auto;
+            width: fit-content;
+        }
+
+        .card-body p {
+            overflow: auto;
+
+        }
+
+        .filter-list button {
+            border-radius: 0;
+            padding: 4px 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container-fluid">
+            <span class="navbar-brand ">Eight Arms</span>
+        </div>
+        <div class="nav-list d-flex justify-content-center align-items-center ">
+            <span class="nav-item">Home</span>
+            <span class="nav-item">Account</span>
+            <span class="nav-item">Products</span>
+            <span class="nav-item">Contact</span>
+        </div>
+    </nav>
+    <div class="section-1 text text-center pt-5">
+        <div class="head-line display-6 m-auto mt-4">A place for your needs, necessaries, gadgets and
+            fashionable things.
+        </div>
+        <div class="filter-list d-flex justify-content-center gap-3 mt-5">
+            <button class="filter btn btn-outline-secondary">Tv</button>
+            <button class="filter btn btn-outline-secondary">Gaming</button>
+            <button class="filter btn btn-outline-secondary">Mobile</button>
+            <button class="filter btn btn-outline-secondary">Audio</button>
+            <button class="filter btn btn-outline-secondary">All</button>
+        </div>
+    </div>
+    <div class="section-2">
+        <div class="product-cards m-x-auto d-flex flex-wrap p-5 justify-content-around">
+
+        </div>
+    </div>
+
+</body>
+<script src="js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+<script src="read-more-less-expander/jquery.expander.min.js"></script>
+
+</html>
