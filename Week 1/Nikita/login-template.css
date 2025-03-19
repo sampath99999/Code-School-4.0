@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    background-image: url('/images/login-template1.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;/* Centers content horizontally x-axis*/
+    align-items: center;/*Centers content vertically y-axis*/
+}
+.sub-container{
+    height: 90vh;
+    width: 30%;
+   background-color: white;
+}
+.top-div{
+    height: 50vh;
+    width: 100%;
+    background-image: url('./images/login-template1.avif');
+    background-size: cover;
+    position: relative;
+}
+h5{
+    color: white;
+    font-size: 15px;
+    /*create account heading will come to top div's bottom*/
+    position: absolute;
+    bottom: 0;
+    margin-left: 100px;
+   
+}
+.buttom-div{
+    height: 50vh;
+    width: 100%;
+    background-size: cover;
+    position: relative;
+    color: white; 
+}
+h3{
+    color: rgb(27, 60, 27);
+   margin-left: 100px;
+   display: block;
+   margin-top: 30px;
+   font-weight: bolder; 
+}
+.form-container{
+    color: rgb(215, 172, 14);
+    margin-top: 5px;
+}
+
+input{
+    display: block;
+    margin: 10px 0px 0px 70px;
+    width: 60%;
+    height: 6vh;
+    border-radius: 20px;
+    border-style: none;
+    background-color: rgb(196, 187, 187);
+    padding-left: 10px;
+}
+input::placeholder{
+    color: white;
+    font-size: 10px;
+}
+input:focus{
+    color: white;
+}
+/*for forget passward*/
+.info{
+    font-size: 8px;
+    margin-top: 5px;
+    
+}
+.info a{
+    color: rgb(14, 69, 14);
+    font-weight: bolder;
+    margin-left: -10px;
+}
+.login-button{
+    /*top right bottom left*/
+    margin: 5px 0px 0px 110px;
+    width: 30%;
+   height: 15px;
+    border-style: none;
+    background-color: rgb(14, 69, 14);
+    padding-top: 5px;
+   border-radius: 5px;
+}
+.login-button:hover{
+    background-color: gray;
+}
+.login-button a{
+    font-size: 12px;
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    display: block;
+    margin-top: -2px; 
+}
+.login-button a:hover{
+    color: rgb(23, 54, 23);
+    font-weight: bolder;
+}

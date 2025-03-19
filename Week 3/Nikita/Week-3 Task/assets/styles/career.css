@@ -1,0 +1,10 @@
+*{
+    font-family: sans-serif;
+}
+.career-nav{
+    min-height: 10vh;
+    background-image: url('/assets/images/header.webp');
+}
+main{
+    background-image: url('/assets/images/textured.jpg');
+}
