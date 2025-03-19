@@ -134,7 +134,7 @@
 }
 
 .image-card img {
-    width: auto;
+    width: 200px;
     height: 200px;
     object-fit: cover; 
     border-bottom: 2px solid #ddd;
