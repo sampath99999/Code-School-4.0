@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Ticket</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/1a7c84f0dc.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+
+    <div id="sidebar">
+
+    </div>
+    <div class="container">
+        <div class="mx-auto">
+            <form action="" class="bg-white px-md-5 px-2 py-4 m-2 shadow rounded">
+                <h1 class="text-center">BOOKING DETAILS</h1>
+
+                <div class="mb-3">
+                    <label for="movie-name" class="form-label">Movie Name</label>
+                    <input type="text" class="form-control" id="movie-name" readonly>
+                    <p class="text-danger mx-3 my-2"></p>
+                </div>
+                <div class="mb-3">
+                    <select class="form-select theater-select" id="theater">
+                        <option selected disabled>Select Theater</option>
+                    </select>
+                    <p class="text-danger mx-3 my-2"></p>
+                </div>
+
+                <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <select class="form-select show-select" id="show">
+                            <option selected disabled>Select Show</option>
+                        </select>
+                        <p class="text-danger mx-3 my-2"></p>
+                    </div>
+                    <div class="mb-3 col-md-6">
+                        <select class="form-select class-select" id="seat-class">
+                            <option selected disabled>Select Seat Category</option>
+                        </select>
+                        <p class="text-danger mx-3 my-2"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <label for="booking-date" class="form-label"> Booking Date</label>
+                        <input type="date" class="form-control" id="booking-date">
+                        <p class="text-danger mx-3 my-2"></p>
+                    </div>
+                    <div class="mb-3 col-md-6">
+                        <label for="tickets" class="form-label">Total Tickets</label>
+                        <input type="number" class="form-control" id="tickets" placeholder="Enter No. of tickets">
+                        <p class="text-danger mx-3 my-2"></p>
+                    </div>
+                </div>
+                <button class="btn btn-danger w-100" id="book-btn">Book</button>
+        </div>
+        </form>
+
+    </div>
+    <button type="button" class="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="modal">
+        Launch static backdrop modal
+      </button>
+    <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content p-3">
+            <div class="modal-header border-0">
+              <button type="button" class="btn-close border border-2 rounded-circle border-danger text-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <h5 class="text-center">Your Ticket</h5>
+            <div class="modal-body row border-0">
+                <div class="col-md-3 col-6 text-center">
+                    <img src="" alt="Movie Image" id="movie-image" class="img-fluid rounded">
+                </div>
+                <div class="col" id="movie-details">
+
+                </div>
+            </div>
+            <div class="modal-footer row bg-light m-2">
+              <div class="col-6 text-center" >
+                <img src="./assets/images/pngimg.com - qr_code_PNG33.png" alt="" class="img-fluid bg-white rounded-2">
+              </div>
+              <div class="col text-center" id="ticket-details">
+
+              </div>
+              <div class="text-center">
+                <button class="btn btn-danger " id="go-home">Go To Home</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./assets/script/bookTicket.js"></script>
+
+</body>
+
+</html>
