@@ -1,0 +1,109 @@
+-- PostgreSQL Schema
+
+CREATE TABLE departments (
+    department_id SERIAL PRIMARY KEY,
+    name VARCHAR(100) UNIQUE NOT NULL
+);
+
+CREATE TABLE employees (
+    employee_id SERIAL PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    salary DECIMAL(10,2) CHECK (salary > 0),
+    department_id INT REFERENCES departments(department_id) ON DELETE SET NULL
+);
+
+CREATE TABLE projects (
+    project_id SERIAL PRIMARY KEY,
+    project_name VARCHAR(100) NOT NULL,
+    budget DECIMAL(12,2) CHECK (budget > 1000),
+    department_id INT REFERENCES departments(department_id) ON DELETE CASCADE
+);
+
+CREATE TABLE employee_projects (
+    employee_id INT REFERENCES employees(employee_id) ON DELETE CASCADE,
+    project_id INT REFERENCES projects(project_id) ON DELETE CASCADE,
+    assigned_date DATE DEFAULT CURRENT_DATE,
+    PRIMARY KEY (employee_id, project_id)
+);
+
+CREATE INDEX idx_department ON employees(department_id);
+CREATE INDEX idx_project ON employee_projects(project_id);
+
+-- Seeding Data
+
+INSERT INTO departments (name) VALUES 
+('Software Development'),
+('Marketing'),
+('Human Resources'),
+('Finance'),
+('Operations');
+
+INSERT INTO employees (first_name, last_name, email, salary, department_id) VALUES 
+('Alice', 'Johnson', 'alice.johnson@example.com', 75000, 1),
+('Bob', 'Smith', 'bob.smith@example.com', 65000, 2),
+('Charlie', 'Brown', 'charlie.brown@example.com', 55000, 3),
+('David', 'Wilson', 'david.wilson@example.com', 85000, 1),
+('Emma', 'Davis', 'emma.davis@example.com', 72000, 4),
+('Frank', 'Miller', 'frank.miller@example.com', 69000, 2),
+('Grace', 'Taylor', 'grace.taylor@example.com', 62000, 3),
+('Hank', 'Moore', 'hank.moore@example.com', 77000, 1),
+('Ivy', 'Clark', 'ivy.clark@example.com', 90000, 5),
+('Jack', 'White', 'jack.white@example.com', 48000, NULL);
+
+INSERT INTO projects (project_name, budget, department_id) VALUES 
+('AI Development', 150000, 1),
+('Marketing Campaign', 80000, 2),
+('Employee Training', 50000, 3),
+('Financial Analysis', 120000, 4),
+('Logistics Optimization', 95000, 5);
+
+INSERT INTO employee_projects (employee_id, project_id, assigned_date) VALUES 
+(1, 1, '2024-03-01'),
+(2, 2, '2024-02-15'),
+(3, 3, '2024-01-20'),
+(4, 1, '2024-02-10'),
+(5, 4, '2024-03-05'),
+(6, 2, '2024-01-30'),
+(7, 3, '2024-02-25'),
+(8, 1, '2024-03-10'),
+(9, 5, '2024-02-18');
+
+-- Questions
+
+-- 1. Basic SQL Queries
+-- a. Fetch all employees' first names, last names, and their department names.
+-- b. Insert a new employee into the employees table with relevant details.
+-- c. Update the salary of an employee whose employee_id = 5 by 10%.
+-- d. Delete all employees who do not belong to any department.
+
+-- 2. Joins & Relationships
+-- a. Retrieve a list of employees along with their department names.
+-- b. Show all projects with their respective department names.
+-- c. Get a list of employees who are not assigned to any project.
+-- d. Retrieve all employees working on a project named "AI Development".
+
+-- 3. Indexes
+-- a. Explain the purpose of the idx_department and idx_project indexes.
+-- b. Run an EXPLAIN ANALYZE on a query fetching all employees from a specific department and check if the index is used.
+-- c. How would you create an index to speed up searches on employees by last_name?
+
+-- 4. Views
+-- a. Create a view that shows the employee name, department name, and project name for employees assigned to projects.
+-- b. Query the view to find employees working in the "Software" department.
+-- c. Modify the view to also include the employee's salary.
+
+-- 5. Constraints
+-- a. Try inserting an employee with a negative salary. What error do you get?
+-- b. Insert a project with a budget of 500. What happens?
+-- c. Insert a new employee in a non-existent department. What happens and why?
+
+-- 6. Transactions
+-- a. Start a transaction to increase the salary of all employees by 5% but roll it back.
+-- b. Write a transaction that deducts 10% from all project budgets and commits the change.
+-- c. Explain the importance of transactions in multi-user environments.
+
+-- 7. Partitioning (Bonus)
+-- a. If we wanted to partition employees by department, how would we modify the schema?
+-- b. How does partitioning improve performance when dealing with large datasets?
