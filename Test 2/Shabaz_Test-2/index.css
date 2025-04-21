@@ -1,0 +1,138 @@
+:root {
+    --purple-50: #f5f3ff;
+    --purple-100: #ede9fe;
+    --purple-200: #ddd6fe;
+    --purple-300: #c4b5fd;
+    --purple-400: #a78bfa;
+    --purple-500: #8b5cf6;
+    --purple-600: #7c3aed;
+    --purple-700: #6d28d9;
+    --purple-800: #5b21b6;
+    --purple-900: #4c1d95;
+}
+
+.bg-gradient-purple-light {
+    background: linear-gradient(to bottom, var(--purple-50), #ffffff);
+}
+
+.text-purple {
+    color: var(--purple-600) !important;
+}
+
+.text-purple-dark {
+    color: var(--purple-800) !important;
+}
+
+.bg-purple {
+    background-color: var(--purple-600) !important;
+}
+
+.bg-purple-light {
+    background-color: var(--purple-100) !important;
+}
+
+.btn-purple {
+    background-color: var(--purple-600);
+    color: white;
+    border: none;
+}
+
+.btn-purple:hover {
+    background-color: var(--purple-700);
+    color: white;
+}
+
+.btn-purple:active {
+    background-color: var(--purple-800) !important;
+}
+
+.card {
+    border-radius: 0.5rem;
+    border: none;
+}
+
+.card-header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.song-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.song-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.song-poster {
+    position: relative;
+    height: auto;
+    background-color: var(--purple-100);
+}
+
+.song-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.play-button {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.play-button:hover {
+    background-color: white;
+}
+
+.favorite-button {
+    background: none;
+    border: none;
+    color: #adb5bd;
+    transition: color 0.2s;
+}
+
+.favorite-button.active {
+    color: #dc3545;
+}
+
+.favorite-button:hover {
+    color: #dc3545;
+}
+
+.category-badge {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 1rem;
+    background-color: var(--purple-100);
+    color: var(--purple-700);
+    display: inline-block;
+}
+
+.border-dashed {
+    border-style: dashed !important;
+    border-color: #dee2e6 !important;
+}
+
+@media (max-width: 767.98px) {
+    .song-poster {
+        height: 120px;
+    }
+}
+
+.toast {
+    border: none;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
