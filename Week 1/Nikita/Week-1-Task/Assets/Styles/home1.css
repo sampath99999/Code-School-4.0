@@ -1,0 +1,150 @@
+:root {
+    --blue: #6BB7BE;
+    --orange: #f89646;
+  }
+
+
+*{
+    font-family: "Poppins", sans-serif;
+}
+.first a{
+    text-decoration: none;
+
+}
+
+#carouselExampleIndicators{
+    width: 95%;
+    min-height: 90vh;
+}
+.carousel-indicators .indicator {
+    background-color: var(--orange); 
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  
+  }
+ 
+  .carousel-indicators .indicator.mid {
+    background-color: var(--blue); 
+  }
+.contact{
+    background-color: #f89646;
+}
+.about{
+    background-color: var(--blue);
+ 
+}
+/* Furniture-cards */
+.Furniture-Cards{
+    width: 95%;
+ 
+}
+
+.text-capitalize {
+    color: var(--blue);
+    text-decoration: none;
+}
+.text-capitalize:hover {
+    color: var(--blue);
+   
+}
+.card-color{
+    background-color: rgba(224, 216, 216, 0.372);
+}
+
+/* About */
+.about-section{
+width: 95%;
+}
+/* blog */
+.blog{
+    width: 95%;
+}
+.card-img-top-blog{
+    height: 200px;
+
+}
+/* testimonial */
+.testimonial{
+    width: 96%;
+}
+.profile-img{
+height: 200px;
+width: 230px;
+
+}
+.profile{
+    border-radius: 100%;
+    border: 10px solid var(--blue);
+}
+.testimonial-card-shadow {
+  
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+/* contact */
+.contact{
+    width: 95%;
+}
+
+input.form-control
+ {
+   
+ 
+  box-shadow: rgba(0, 0, 0, 0.10) 0px 3px 8px;
+   
+}
+textarea.form-control{
+    box-shadow: rgba(0, 0, 0, 0.10) 0px 3px 8px;
+}
+/* Footer */
+
+.footer{
+    width: 90%;
+}
+
+.footer-links li{
+    list-style: none;
+}
+.footer-links li a{
+    text-decoration: none;
+    color: white;
+    
+}
+.footer-links li a:hover{
+   
+   color: var(--orange);
+    
+}
+.footer-card{
+    width: 70px;
+    height: 70px;
+    background-color: white;
+}
+.footer-submit-btn{
+    background-color: var(--blue);
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+.footer-icon-links{
+    height: 35px;
+    width: 35px;
+    border: 2px solid  var(--blue);
+    margin-right: 5px;
+}
+
+.footer-icon{
+    color: var(--blue);
+    font-size: 20px;
+  
+}
+.footer-icon-links:hover{
+    border: 2px solid var(--orange);
+
+}
+.footer-icon:hover{
+    color: var(--orange);
+}
+
+
+

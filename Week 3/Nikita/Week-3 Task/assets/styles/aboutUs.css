@@ -1,0 +1,25 @@
+:root{
+    --secondary-color: rgb(255, 174, 0);
+--accent-color: #6870F3;
+}
+.nav-link {
+    font-size: 13px;
+}
+.cultureImage{
+    background-image: url('./assets/images/aboutUsCulture.PNG');  
+    background-size: cover; 
+    background-position: center; 
+    min-height: 300px;
+}
+.line-half {
+    width: 30px;
+    height: 3px;
+}
+
+.line-half-yellow {
+    background-color: var(--secondary-color);
+}
+
+.line-half-blue {
+    background-color: var(--accent-color);
+}

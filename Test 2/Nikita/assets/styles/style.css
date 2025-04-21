@@ -1,0 +1,15 @@
+label,.form-,input::placeholder{
+    font-size: 13px;
+}
+.navbar-bg-color{
+    background-color: teal !important;
+}
+tr{
+    font-size: 13px;
+}
+.btn-fs{
+    font-size: 12px !important;
+}
+.form-width{
+    min-width: 300px;
+}
