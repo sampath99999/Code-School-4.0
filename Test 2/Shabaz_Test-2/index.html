@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song Manager</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <i class="fas fa-music me-2 text-purple"></i>
+                <span class="fw-bold text-purple-dark">SongManager</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"><i class="fas fa-home me-1"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-heart me-1"></i> Favorites</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <div class="d-flex align-items-center me-3">
+                        <div class="rounded-circle bg-purple-light p-2 text-purple-dark">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline-secondary btn-sm">
+                        <i class="fas fa-sign-out-alt me-1"></i> Logout
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="bg-gradient-purple-light min-vh-100 py-4">
+        <div class="container">
+            <!-- Header -->
+            <header class="mb-4">
+                <h1 class="text-purple-dark fw-bold">Song Manager</h1>
+                <p class="text-muted">Upload and manage your music collection</p>
+            </header>
+
+            <div class="row g-4">
+                <!-- Upload Form -->
+                <div class="col-lg-4">
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-white">
+                            <h5 class="card-title text-purple mb-0">Upload New Song</h5>
+                        </div>
+                        <div class="card-body">
+                            <form id="uploadForm">
+                                <div class="mb-3">
+                                    <label for="songTitle" class="form-label">Song Title</label>
+                                    <input type="text" class="form-control" id="songTitle" name="songTitle" placeholder="Enter song title" required>
+                                </div>
+                            
+                                <div class="mb-3">
+                                    <label for="artists" class="form-label">Artists</label>
+                                    <input type="text" class="form-control" id="artists" name="artists" placeholder="Enter artist names" required>
+                                </div>
+                            
+                                <div class="mb-3">
+                                    <label for="category" class="form-label">Category</label>
+                                    <select class="form-select" id="category" name="category" required>
+                                        <option value="" disabled selected>Select a category</option>
+                                        <option value="1">Bollywood</option>
+                                        <option value="2">Tollywood</option>
+                                        <option value="3">Hollywood</option>
+                                    </select>
+                                </div>
+                            
+                                <div class="mb-3">
+                                    <label for="posterFile" class="form-label">Song Poster</label>
+                                    <input type="file" class="form-control" id="posterFile" name="posterFile" accept="image/*" required>
+                                </div>
+                            
+                                <div class="mb-3">
+                                    <label for="songFile" class="form-label">Song File</label>
+                                    <input type="file" class="form-control" id="songFile" name="songFile" accept=".mp3,.wav,.ogg" required>
+                                </div>
+                            
+                                <button type="submit" class="btn btn-purple w-100" id="uploadButton">
+                                    <i class="fas fa-music me-2"></i> Upload Song
+                                </button>
+                            </form>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Song List -->
+                <div class="col-lg-8">
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                            <h5 class="card-title text-purple mb-0">Your Songs</h5>
+                            <div class="dropdown">
+                                <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" id="categoryFilter" data-bs-toggle="dropdown">
+                                    <i class="fas fa-filter me-1"></i> Filter
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="categoryFilter">
+                                    <li><h6 class="dropdown-header">Filter by Category</h6></li>
+                                    <li><a class="dropdown-item active" href="#" data-category="0">All Categories</a></li>
+                                    <li><a class="dropdown-item" href="#" data-category="1">Bollywood</a></li>
+                                    <li><a class="dropdown-item" href="#" data-category="2">Tollywood</a></li>
+                                    <li><a class="dropdown-item" href="#" data-category="3">Hollywood</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div id="songList" class="row g-3">
+                                <!-- Songs will be dynamically added here -->
+                            </div>
+                            <div id="noSongs" class="text-center p-5 border border-dashed rounded d-none">
+                                <p class="text-muted">No songs found. Upload your first song!</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+        <div id="toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <i id="toastIcon" class="fas fa-check-circle me-2 text-success"></i>
+                <strong class="me-auto" id="toastTitle">Success</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body" id="toastMessage">
+                Your song has been uploaded successfully!
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
