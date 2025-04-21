@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat</title>
+  <link rel="stylesheet" href="./styles/Chat.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body class="bg-light">
+  <div class="container mt-3">
+    <div class="row card">
+      <div class="card col-lg-12 d-flex flex-column chat-container m-0 p-0 border-0">
+        <div
+          class="bg-success text-white p-3 text-start rounded-bottom-0 rounded-top fw-bolder fs-5 d-flex justify-content-between align-items-center">
+          <div class="d-flex align-items-center justify-content-center">
+            <img src="./images/logo.jpg" alt="QuixChat Logo" class="user-icon rounded-circle ms-2" style="
+                  width: 40px;
+                  height: 40px;
+                  object-fit: fill;
+                  border: 1px solid #ccc;
+                " />
+            <span class="pt-2 ps-2">QuixChat</span>
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            <span id="usernameDisplay" class="fw-semibold btn btn-sm text-black bg-primary-subtle fs-6 p-0 pt-2 px-2"></span>
+            <button id="logoutBtn" class="btn btn-sm text-white bg-danger fs-5 p-0 pt-1">
+              <i class="fa fa-sign-out p-0 pt-1 px-2" aria-hidden="true"></i>
+            </button>
+          </div>
+
+        </div>
+
+        <div class="chat-box d-flex flex-column p-3 bg-white flex-grow-1 overflow-auto"></div>
+
+        <form id="chatForm" class="p-3 bg-input rounded-bottom border-top">
+          <div id="filePreviewContainer" class="mb-2 border rounded p-2"
+            style="max-height: 80px; overflow-y: auto; display: none"></div>
+
+          <div class="d-flex gap-1 align-items-center">
+            <input type="text" id="messageInput" class="form-control" placeholder="Type a message..." name="message"
+              autocomplete="off" />
+
+            <label for="fileInput" class="btn btn-outline-secondary p-0 pt-2 pb-0 px-3">
+              <i class="fa fa-plus"></i>
+            </label>
+
+            <input type="file" id="fileInput" class="d-none" multiple accept="image/*,video/*,audio/*,application/*" />
+
+            <button id="send" class="btn btn-success p-0 pt-2 px-3" type="submit">
+              <i class="fa fa-paper-plane"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="fileModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-0 py-5 text-center">
+          <div id="fileModalContent"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <script src="./scripts/LogoutHandler.js"></script>
+  <script src="./scripts/FileHandler.js"></script>
+  <script src="./scripts/Chat.js"></script>
+</body>
+
+</html>
