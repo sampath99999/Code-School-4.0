@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+</head>
+<style>
+    .signup-container {
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        max-width: 900px;
+        margin: 2rem auto;
+    }
+
+    .signup-form {
+        padding: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 60px;
+    }
+
+    .form-control {
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        padding: 0.75rem;
+        transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    .form-control:focus {
+        border-color: #6c63ff;
+        box-shadow: 0 0 8px rgba(108, 99, 255, 0.3);
+        outline: none;
+    }
+
+    #m_img {
+        object-fit: cover;
+        height: auto;
+        width: auto;
+    }
+
+    #m-img {
+        height: 75vh;
+        width: 23vw;
+    }
+
+    .btn {
+        background-color: #6c63ff;
+    }
+
+    .btn:hover {
+        background: #5a54d9;
+        transform: translateY(2px);
+        /* border: 1px #6c63ff solid; */
+    }
+</style>
+
+<body>
+    <div class="container signup-container">
+        <div class="row g-0">
+            <div class="col-md-6" id="m_img">
+                <img src="https://wallpapercave.com/wp/wp6272587.jpg" alt="music_img" id="m-img">
+            </div>
+            <div class="col-md-6 signup-form justify-content-center">
+                <p class="display-5">Sign Up</p>
+                <form id="signupForm" onsubmit="register(event)">
+                    <div class="mb-3">
+                        <label for="last_name" class="form-label">User Name</label>
+                        <input type="text" class="form-control" id="username">
+                        <em id="user_name_error"></em>
+                    </div>
+                    <div class="mb-3">
+                        <label for="Email1" class="form-label">Email</label>
+                        <input type="text" class="form-control" id="email">
+                        <em id="email_error"></em>
+                    </div>
+                    <div class="mb-3">
+                        <label for="Password1" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password">
+                        <em id="password_error"></em>
+                    </div>
+                    <button type="submit" id="submit" class="btn btn-lg text-light float-end">Sign Up</button>
+                </form>
+                <span>Already have an account? <a href="./signin.html">Sign in</a></span>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+
+    function register(event) {
+        event.preventDefault();
+        let user = $('#username').val()
+        let email = $('#email').val()
+        let password = $('#password').val()
+
+        $.ajax({
+            type: 'POST',
+            url: '/api/signup.php',
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+            },
+            data: {
+                username: user,
+                email: email,
+                password: password
+            },
+            dataType: 'json',
+            success: function (response) {
+                if (response.status) {
+                    Swal.fire({
+                        title: 'Success',
+                        icon: 'success',
+                        text: response.message
+                    });
+                    $("#signupForm")[0].reset();
+                    window.location.href = 'signin.html'
+                }
+                else {
+                    Swal.fire({
+                        title: 'Failed',
+                        icon: 'error',
+                        text: response.message
+                    });
+                }
+            }
+        })
+    }
+</script>
+
+</html>
