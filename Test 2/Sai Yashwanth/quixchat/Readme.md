@@ -45,7 +45,7 @@ Registration screen for new users.
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-repo/quixchat.git
+   git clone git@github.com:Yashwanth-chary/Code-School-4.0.git
    ```
 2. Navigate to the project directory:
    ```sh
