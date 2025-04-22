@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fetch API</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
+    <style>
+      body{
+        background-color: bisque;
+      }
+
+      img{
+        width: 75vh;
+        height: 50vh;
+        object-fit: contain;
+      }
+      
+    </style>
+</head>
+
+<body>
+  <div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="row w-100 justify-content-center">
+      <div class="col-12 col-md-8 col-lg-6">
+        <div class="card text-center">
+          <div class="card-body">
+            <h5 class="card-title">Fetch Your Image and Download It</h5>
+            <div class="mb-3">
+              <img src="https://static.wixstatic.com/media/2f7d8a_bb5164f2c44947468ac33f76a4fd14e8~mv2.jpg/v1/fill/w_980,h_650,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/2f7d8a_bb5164f2c44947468ac33f76a4fd14e8~mv2.jpg"
+                id="img-box" class="img-fluid rounded" alt="Fetched Image">
+            </div>
+            <p class="card-text" id="quotes-change">
+              Some quick example text to build on the card title and make up the bulk of the card's content.
+            </p>
+            <div class="d-flex flex-column flex-sm-row gap-2 justify-content-center">
+              <a class="btn btn-primary" id="new-button">Fetch</a>
+              <a class="btn btn-primary" id="downloadImage">Download</a>
+              <!-- <a class="btn btn-dark" id="quote-button">Quote</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
