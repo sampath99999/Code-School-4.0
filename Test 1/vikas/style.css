@@ -1,0 +1,35 @@
+#backImg {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+.cedarville-cursive-regular {
+  font-family: "Cedarville Cursive", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: whitesmoke;
+}
+.navbar-nav .nav-link {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: whitesmoke;
+}
+h1,
+h3,
+h5 {
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.backImg {
+  background-image: url("back.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+img {
+  object-fit: cover;
+  height: 100%;
+}
+
+
