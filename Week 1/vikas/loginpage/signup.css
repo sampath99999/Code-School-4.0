@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+
+p {
+  color: aliceblue;
+}
+
+#mainheading {
+  font-size: 75px;
+  margin-bottom: 40px;
+}
+
+#Join {
+  font-size: 40px;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+#confirm {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+#username,
+#password {
+  padding: 10px;
+  width: 350px;
+}
+
+#password {
+  margin-bottom: px;
+}
+
+#confirmpassword {
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 350px;
+}
+button {
+  border-radius: 20px;
+  padding-bottom: 8px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 350px;
+  background-color: azure;
+  border: none;
+  font-weight: bold;
+}
+
+#or {
+  font-size: medium;
+  margin: 5px;
+  padding-left: 90px;
+  padding-right: 40px;
+}
+
+#Account-button {
+  background-color: rgb(29, 155, 240);
+}
+
+#Account-button > a {
+  color: whitesmoke;
+  font-weight: 5px;
+}
+
+#signup {
+  margin: 10px;
+}
+
+#rules {
+  margin-top: 5px;
+}
+
+#page1 {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 150px;
+  margin-bottom: 30px;
+}
+
+#input {
+  position: relative;
+  bottom: 80px;
+}
+
+a {
+  text-decoration: none;
+  color: navy;
+}
+li > a {
+  color: grey;
+}
+
+li > a:hover {
+  color: darkgrey;
+}
+
+#Logo {
+  height: 400px;
+  width: 400px;
+}
+footer {
+  position: relative;
+  bottom: 10px;
+}
+ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+li {
+  color: aliceblue;
+}
+
+i {
+  margin: 5px;
+}
+
+.pt-serif-regular {
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+input:focus {
+  outline: none;
+}
