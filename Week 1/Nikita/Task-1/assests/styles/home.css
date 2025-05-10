@@ -1,0 +1,139 @@
+*{
+        font-family: "Poppins", sans-serif;
+    
+}
+.nav a{
+    text-transform: uppercase;
+}
+#carouselExampleIndicators{
+   
+    background-color: rgba(227, 231, 231, 0.42);
+    
+}
+.slider-heading h2{
+    font-weight: 800;
+    text-transform: uppercase;}
+
+  
+    .card-img-top {
+        height: 250px; 
+        object-fit: fill;
+        
+      }
+      .card-body h6{
+        font-size: 18px;
+        text-transform: uppercase;
+      }
+      .rate{
+        font-size: 16px;
+        text-transform: uppercase;
+      }
+      .d-flex .rate:nth-of-type(2) {
+        color: #6BB7BE;
+       
+      }
+      .card{
+        border: none;
+      }
+      /* about */
+      .about-section{
+        /* margin-top: 650px;
+        height: 90vh;
+        position: relative;
+        padding-top: 40px; */
+      }
+     .blog-section{
+        height: 80vh;
+     }
+
+    .card-img-top-blog{
+        height: 200px;
+
+    }
+    .blog-heading{
+        font-weight: 700;
+        text-transform: lowercase;
+    }
+    /* testimonial */
+    .testimonial{
+        /* height: 80vh; */
+    }
+    .profile-img{
+        height: 180px;
+        width: 180px;
+        object-fit: fill;
+        border-radius: 50%;
+        border: 10px solid #6BB7BE;
+       
+    }
+    .testimonial-card-shadow{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+   
+   input .form-control{
+    height: 50px;
+    /* border: none; */
+   }
+   input.form-control, 
+textarea.form-control {
+    border: none;
+  background-color: whitesmoke;
+  box-shadow: rgba(0, 0, 0, 0.10) 0px 3px 8px;
+   
+}
+.icons{
+    color: white;
+    font-weight: bolder;
+}
+.icons:hover{
+    color: #f89646;
+}
+
+/* Footer */
+.footer{
+    height: 80vh;
+}
+
+.footer-links li{
+    list-style: none;
+}
+.footer-links li a{
+    text-decoration: none;
+    color: white;
+    
+}
+.footer-links li a:hover{
+   
+   color: #f89646;
+    
+}
+.footer-card{
+    width: 70px;
+    height: 70px;
+    background-color: white;
+}
+.footer-submit-btn{
+    background-color: #6BB7BE;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+.footer-icon-links{
+    height: 35px;
+    width: 35px;
+    border: 2px solid #6BB7BE;
+    margin-right: 5px;
+}
+
+.footer-icon{
+    color: #6BB7BE;
+    font-size: 20px;
+  
+}
+.footer-icon-links:hover{
+    border: 2px solid #f89646;
+
+}
+.footer-icon:hover{
+    color: #f89646;
+}

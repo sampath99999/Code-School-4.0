@@ -1,0 +1,138 @@
+main{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   background-color: rgb(200, 209, 209);
+}
+.container{
+    height: 70vh;
+    width: 70%;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.left{
+    height: 70vh;
+    width: 30%;
+   /*background-color: rgb(13, 71, 71);*/
+   background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+   box-shadow: 5px  5px 5px rgb(215, 210, 210);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding-left: 20px;
+   
+  
+}
+.heading{
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+   
+}
+.content{
+    font-size: 10px;
+    color: white;
+}
+
+
+.right{
+   
+    /*box-shadow: 5px  5px 5px rgb(236, 232, 232);*/
+    box-shadow: 10px 10px 5px #aaaaaa;
+    height: 70vh;
+    width: 50%;
+   /*background-color: rgb(127, 122, 131);*/
+   background-color: white;
+  
+   
+}
+.registration-block{
+
+    height: 60vh;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+.icons{
+    display: flex;
+    margin-top: 10px;
+    
+}
+
+.icons span{
+    font-size: 20px;
+    color: white;
+    
+}
+.icons div{
+    height: 40px;
+    width: 40px;
+   /* background-color: rgb(17, 63, 63);*/
+   background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+    border-radius: 50%;
+    padding-top: 5px;
+    padding-left: 10px;
+    
+}
+.icons div:hover{
+    background-image: linear-gradient(to top,#b490ca  0%, #5ee7df 100%);
+}
+.heading-reg{
+    height: 5vh;
+    width: 100%;
+    margin-left: 30px;
+   margin-top: 10px;
+    color: gray;
+    font-weight: bolder;
+    padding-top: 5px;
+    padding-left: 40px;
+}
+.heading-right{
+    color: #b490ca;
+    font-weight: bolder;
+    font-size: 20px;
+}
+form{
+    margin-top: -10px;
+}
+
+.form-control{
+    background-color: rgb(199, 192, 192);
+    
+}
+.form-control::placeholder{
+    font-size: 12px;
+    color: white;
+}
+.form-control:focus::placeholder{
+color: black;
+}
+
+.button-sign{
+    margin-top: 20px;
+    width: 60%;
+    border-radius: 20px;
+    margin-left: 30px;
+    background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+    padding-bottom: 5px;
+    padding-left: 35px;
+    padding-top: 5px;
+    border: none;
+}
+.button-sign:hover{
+    background-image: linear-gradient(to top,#b490ca  0%, #5ee7df 100%);
+}
+.button-sign a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
