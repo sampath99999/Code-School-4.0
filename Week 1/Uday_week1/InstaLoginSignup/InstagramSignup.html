@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InstaSignup</title>
+    <link rel="stylesheet" href="InstagramSignup.css" />
+    <script
+      src="https://kit.fontawesome.com/b3e40ae08b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cookie&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main">
+        <div class="main1">
+            <div class="form">
+                <form>
+                <p id="insta">Instagram</p>
+                <p class="Description">Sign up to see photos and videos<br>from your friends.</p>
+                <button class="facebook">
+                    <i class="fa-brands fa-facebook" style="color: #74c0fc"></i>
+                    <a href="https://www.facebook.com/"><small>Log in with Facebook<script src="https://kit.fontawesome.com/b3e40ae08b.js" crossorigin="anonymous"></script></a>
+                </button>
+                <div class="line">
+                    <hr />
+                    <p>or</p>
+                    <hr />
+                </div>
+                <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    placeholder="Phone numberor email"
+                    required
+                />
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Password"
+                    pattern="([A-Za-z]){9}"
+                    title="Must contain at least one uppercase and lowercase letter, and must have 9 characters"
+                    required
+                />
+                <input type="text" id="Fullname" name="Fullname" placeholder="Fullname">
+                <input type="text" id="Username" name="Username" placeholder="name">
+                <p class="note">People who use our service may have uploaded<br>your contact information to Instagram.<a href="#">Learn More</a> </p>
+                <p class="note">By signing up, you agree to our Terms , <a href="#">Privacy<br>Policy</a> and <a href="#">Cookies Policy</a> .</p>
+                <button><small>Sign up</small></button>
+                </form>
+            </div>
+            <hr>
+            <p id="Signin">Have an account?<a href="InstagramLogin.html"><small>Log in</small></a></p>
+        </div>
+    </div>
+  </body>
+</html>

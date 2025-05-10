@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="practice.css" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  </head>
+  <body class=" ">
+    <div class="main p-3" >
+      <div class="imagediv p-5 d-flex justify-content-center align-items-center" style="width:360px;text-align: center;">
+        <img id="fetchimage" src="" alt="" class="my-5 d-block mx-auto" style="margin-top:30px;margin-bottom: 10px;" />
+        <div class="d-flex justify-content-around">
+          <button class="text-dark FetchAgain " id="button" onclick="fetchImage()">
+            Fetch Again
+         </button>
+         <button class="text-dark Download" id="downloadImage">
+            Download
+        </div>
+      </div>
+      <h3 class="text-center text-success">QUOTE OF THE DAY</h3>
+      <p class="text-center fw-bolder " id="quote"></p>
+    </div>
+    
+    <script src="practice.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+  </body>
+</html>
