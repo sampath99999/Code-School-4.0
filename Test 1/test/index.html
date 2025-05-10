@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yessy</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/8e95a6a194.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="main w-100">
+      <nav
+        class="navbar navbar-expand-lg"
+        id="navbarcontainer"
+      >
+        <div class="container-fluid mt-0">
+          <a class="navbar-brand fw-bolder fs-3">Yessy</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-start"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav mx-3 gap-4">
+              <div class="dropdown">
+                <button
+                  class="btn dropdown-toggle gap-4"
+                  type="button"
+                  id="dropdownMenuButton1"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Buy Art
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="#">Browse Art</a></li>
+                  <li><a class="dropdown-item" href="#">Your Orders</a></li>
+                  <li><a class="dropdown-item" href="#">Buyer FAQ</a></li>
+                </ul>
+              </div>
+              <div class="dropdown">
+                <button
+                  class="btn dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton1"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Sell Art
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li>
+                    <a class="dropdown-item" >14-Day free trial</a>
+                  </li>
+                  <li><a class="dropdown-item" >Seller FAQ</a></li>
+                  <li><a class="dropdown-item" >Sign In</a></li>
+                </ul>
+              </div>
+              <li class="nav-item">
+                <a class="nav-link" >About Us</a>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav mx-3 gap-4">
+              <div class="dropdown">
+                <button
+                  class="btn dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton1"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Your Account
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="#">General</a></li>
+                  <li><a class="dropdown-item" href="#">Buyer</a></li>
+                  <li><a class="dropdown-item" href="#">Seller</a></li>
+                </ul>
+              </div>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Help</a>
+              </li>
+            </ul>
+          </div>
+          <div class="d-flex align-items-center gap-4">
+            <a href="#" class="cart-icon">
+              <i class="fa-solid fa-bag-shopping fs-4 text-dark"></i>
+              <span class="cart-count badge bg-danger rounded-circle">0</span>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="d-flex flex-column justify-content-center align-items-center" id="text" style="position: relative; text-align: center;">
+        <img src="./bg.jpg" style="width: 100%;">
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white;">
+            <h2 class="header fs-1 fw-bolder text-dark">SIMPLY ART.SIMPLY BEAUTIFUL</h2>
+            <p class="text-dark">For seventeen years, artists and buyers have trusted Yessy to buy and sell art, Now find your perfect art</p>
+            <form>
+                <div class="input-group mb-3">
+                    <input type="text" placeholder="Enter Keywords" id="feild" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button class="btn btn-outline-secondary text-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        All categories
+                    </button>
+                    <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item text-light" href="#">recepies</a></li>
+                        <li><a class="dropdown-item text-light" href="#">ingredients</a></li>
+                    </ul>
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="categories">
+        <h2 id="cart">CATEGORIES</h2>
+    </div>
+
+    <div class="container">
+    
+    </div>
+    
+   <script src="./script.js"></script>
+  </body>
+</html>
