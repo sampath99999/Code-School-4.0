@@ -1,0 +1,15 @@
+
+body{
+    background-image: url('/Assestes/images/registration-bg.jpg');
+    background-size: cover;
+   
+}
+button{
+    background-color: rgb(255, 119, 0);
+}
+
+
+.icons span:hover {
+    color: rgb(255, 119, 0) !important; 
+}
+

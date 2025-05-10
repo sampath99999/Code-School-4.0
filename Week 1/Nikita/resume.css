@@ -1,0 +1,58 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.first{
+    width: 65%;
+   padding-top: 40px;
+   padding-left: 50px;
+   padding-right: 50px;
+   margin-left: 20px;
+   box-shadow: 5px 5px  5px 5px #888888;
+   margin-top: 30px;
+   margin-bottom: 30px;
+  
+}
+.first p{
+    margin-top: -10px;
+    font-size: 15px;
+    word-spacing: 2px;
+    line-height: 1.2;
+   
+}
+
+hr
+{
+    height: 1.5px;
+    background-color: black;
+}
+li{
+    line-height: 1.8;
+}
+
+.project-role{
+    height: 20vh;
+    width: 60%;
+    margin-left: 30px;
+    margin-top: -15px;
+    
+}
+.Declaration{
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.left{
+    height: 20vh;
+    width: 30%;
+  
+}
+.right{
+    height: 20vh;
+    width: 30%;
+   
+}

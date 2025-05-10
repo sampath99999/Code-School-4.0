@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Account March-4</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/styles/index.css">
+    
+</head>
+<body class="vh-100 d-flex  align-items-center flex-column ">
+    <main class="container p-4 shadow bg-body rounded  w-75 vh-70 mt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-7 col-md-8 col-12 text-white px-4 py-3">
+                <img src="assets/images/google-logo.png" alt="Google Logo" height="30" width="80">
+                <h5 class="text-dark mt-2">Create your Google Account</h5>
+                <p class="text-dark">to continue to Gmail</p>
+                <form id="registrationForm">
+                    <div class="row g-2">
+                        <div class="col-6">
+                            <label for="firstName" class="text-dark">First Name</label>
+                            <input type="text" class="form-control" id="firstName" name="firstName">
+                        </div>
+                        <div class="col-6">
+                            <label for="lastName" class="text-dark">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" name="lastName">
+                        </div>
+                    </div>
+                    <div class="mt-2">
+                        <label for="username" class="text-dark">Username (Email)</label>
+                        <input type="email" class="form-control" id="username" name="username">
+                        <small class="text-dark">You can use letters, numbers & periods</small>
+                    </div>
+                    <div class="row g-2 mt-2">
+                        <div class="col-6">
+                            <label for="password" class="text-dark">Password</label>
+                            <input type="password" class="form-control" id="password" name="password">
+                        </div>
+                        <div class="col-6">
+                            <label for="confirmPassword" class="text-dark">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirmPassword" name="confirmPassword">
+                        </div>
+                        <small class="text-dark">Use 8 or more characters with a mix of letters, numbers & symbols</small>
+                    </div>
+                    <div class="form-check mt-2">
+                        <input class="form-check-input" type="checkbox" id="showPassword">
+                        <label class="form-check-label text-dark" for="showPassword">Show Password</label>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <a href="#" class="text-decoration-none">Sign in instead</a>
+                        <button type="submit" class="btn btn-primary" id="registration_btn">Next</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-5 col-md-4 d-none d-md-flex flex-column justify-content-center align-items-center">
+                <img src="assets/images/google-accounts.png" alt="Google Accounts" class="img-fluid" width="200">
+                <p class="text-center fs-6">One account. All of Google.<br>Working for you.</p>
+            </div>
+        </div>
+    </main>
+    <div class=" row d-flex justify-content-between w-75 p-4">
+        <div class="col-12 col-md-6 text-secondary">English United Kingdom</div>
+        <div class="col-12 col-md-6 d-flex justify-content-end ">
+            <div><a href="" class="text-decoration-none text-secondary">Help</a></div>
+            <div class="mx-4"><a href="" class="text-decoration-none text-secondary">Privacy</a></div>
+            <div><a href="" class="text-decoration-none text-secondary">Terms</a></div>
+        </div>
+    </div>
+   
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script src="/assets/js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
