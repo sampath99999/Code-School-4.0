@@ -1,0 +1,12 @@
+User-Wise Order Status Summary
+User-Wise Order Summary with Address and Total Spend
+User Rank Based on Number of Orders Placed
+Category-Wise Product Summary
+User Order Details with Product and Address
+Users Who Ordered At Least Once Every Month
+Products That Have Never Been Purchased
+User-Wise and Address-Wise Order Status Breakdown
+User Ranking Based on Total Money Spent
+Month-Wise Product Purchase Count Per User
+Month-Wise Order Count Per User
+User Order Summary with Product Count and Status
