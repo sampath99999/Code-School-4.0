@@ -1,0 +1,264 @@
+CREATE DATABASE task;
+-- Users Table
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(100) UNIQUE NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    full_name VARCHAR(255),
+    phone VARCHAR(20),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Categories Table
+CREATE TABLE categories (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL
+);
+
+-- Products Table
+CREATE TABLE products (
+    id SERIAL PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    description TEXT,
+    price DECIMAL(10, 2) NOT NULL,
+    stock_quantity INT DEFAULT 0,
+    category_id INT REFERENCES categories(id) ON DELETE SET NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Cart Table 
+CREATE TABLE cart (
+    id SERIAL PRIMARY KEY,
+    user_id INT REFERENCES users(id) ON DELETE CASCADE,
+    product_id INT REFERENCES products(id) ON DELETE CASCADE,
+    quantity INT NOT NULL CHECK (quantity > 0),
+    added_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Address TABLE
+CREATE TABLE address(
+    id SERIAL PRIMARY KEY,
+    address VARCHAR(255) NOT NULL
+);
+
+-- Orders Table
+CREATE TABLE orders (
+    id SERIAL PRIMARY KEY,
+    user_id INT REFERENCES users(id) ON DELETE CASCADE,
+    address_id INT REFERENCES address(id) ON DELETE CASCADE,
+    total_price DECIMAL(10, 2) NOT NULL,
+    status VARCHAR(50) DEFAULT 'Pending', 
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Order Items Table 
+CREATE TABLE order_items (
+    id SERIAL PRIMARY KEY,
+    order_id INT REFERENCES orders(id) ON DELETE CASCADE,
+    product_id INT REFERENCES products(id) ON DELETE CASCADE,
+    quantity INT NOT NULL CHECK (quantity > 0),
+    price DECIMAL(10,2)NOT NULL
+);
+
+SELECT * FROM order_items;
+--INSERTING VALUES IN USERS TABLE
+INSERT INTO users (username, email, full_name, phone) VALUES
+('alice123', 'alice@example.com', 'Alice Johnson', '9876543210'),
+('bob_smith', 'bob@example.com', 'Bob Smith', '9876543211'),
+('charlie_b', 'charlie@example.com', 'Charlie Brown', '9876543212'),
+('david_lee', 'david@example.com', 'David Lee', '9876543213'),
+('emma_watson', 'emma@example.com', 'Emma Watson', '9876543214'),
+('frank_miller', 'frank@example.com', 'Frank Miller', '9876543215'),
+('grace_hopper', 'grace@example.com', 'Grace Hopper', '9876543216'),
+('harry_potter', 'harry@example.com', 'Harry Potter', '9876543217'),
+('isabella_ross', 'isabella@example.com', 'Isabella Ross', '9876543218'),
+('jack_black', 'jack@example.com', 'Jack Black','9876543219');
+
+--INSERTING VALUES INTO CATEGORIES TABLE
+INSERT INTO categories (name) VALUES
+('Electronics'),
+('Clothing'),
+('Books'),
+('Groceries'),
+('Furniture'),
+('Sports & Fitness'),
+('Beauty & Personal Care'),
+('Toys & Games'),
+('Home Appliances'),
+('Automobile Accessories');
+
+--INSERTING VALUES INTO PRODUCTS TABLE
+INSERT INTO products (title, description, price, stock_quantity, category_id) VALUES
+('Smartphone', 'Latest 5G smartphone with 128GB storage', 799.99, 10, 1),
+('Laptop', 'High-performance laptop with 16GB RAM', 1200.00, 5, 1),
+('T-Shirt', 'Cotton round-neck t-shirt', 19.99, 50, 2),
+('Jeans', 'Slim fit blue jeans', 39.99, 30, 2),
+('Fiction Book', 'Best-selling fiction novel', 14.99, 100, 3),
+('Rice Bag', '5kg bag of high-quality rice', 10.99, 200, 4),
+('Sofa', 'Luxury 3-seater sofa', 499.99, 3, 5),
+('Dining Table', 'Wooden dining table set', 699.99, 2, 5),
+('Dumbbells', 'Set of adjustable dumbbells (10kg each)', 59.99, 20, 6),
+('Hair Dryer', 'Powerful 2000W hair dryer with ionic technology',49.99,15,7);
+
+--INSERTING VALUES INTO CART
+INSERT INTO cart (user_id, product_id, quantity) VALUES
+(1, 1, 1),
+(2, 3, 2),
+(3, 5, 3),
+(4, 6, 1),
+(5, 8, 1),
+(6, 2, 1),
+(7, 4, 2),
+(8, 7, 1),
+(9, 9, 2),
+(10,10,1);
+
+--INSERTING VALUES INTO ADDRESS TABLE
+INSERT INTO address (address) VALUES
+('123 Main St, New York, NY'),
+('456 Elm St, San Francisco, CA'),
+('789 Oak St, Los Angeles, CA'),
+('321 Pine St, Miami, FL'),
+('654 Maple St, Seattle, WA'),
+('111 Birch St, Chicago, IL'),
+('222 Cedar St, Boston, MA'),
+('333 Spruce St, Austin, TX'),
+('444 Redwood St, Denver, CO'),
+('555 Magnolia St,Dallas,TX');
+
+--INSERTING VALUES INTO ORDERS TABLE
+INSERT INTO orders (user_id, address_id, total_price, status) VALUES
+(1, 1, 799.99, 'Pending'),
+(2, 2, 79.98, 'Shipped'),
+(3, 3, 44.97, 'Delivered'),
+(4, 4, 10.99, 'Pending'),
+(5, 5, 699.99, 'Shipped'),
+(6, 6, 1200.00, 'Delivered'),
+(7, 7, 39.99, 'Pending'),
+(8, 8, 499.99, 'Shipped'),
+(9, 9, 119.98, 'Pending'),
+(10, 10, 49.99,'Delivered');
+
+--INSERTING VALUES INTO ORDER_ITEMS
+INSERT INTO order_items (order_id, product_id, quantity, price) VALUES
+(1, 1, 1, 799.99),
+(2, 3, 2, 19.99),
+(3, 5, 3, 14.99),
+(4, 6, 1, 10.99),
+(5, 8, 1, 699.99),
+(6, 2, 1, 1200.00),
+(7, 4, 1, 39.99),
+(8, 7, 1, 499.99),
+(9, 9, 2, 59.99),
+(10,10,1,49.99);
+
+--QUERIES
+--1st query
+SELECT 
+    c.name AS category_name, 
+    STRING_AGG(p.title, ',') AS product_list
+FROM products p
+JOIN categories c ON p.category_id = c.id
+GROUP BY c.name
+ORDER BY c.name;
+
+--2nd query
+SELECT 
+    u.username, 
+    u.email, 
+    COUNT(oi.order_id) AS products_ordered, 
+    SUM(oi.price) AS total_price, 
+    a.address
+FROM users u
+JOIN orders o ON o.user_id = u.id  
+JOIN order_items oi ON oi.order_id = o.id  
+JOIN address a ON o.address_id = a.id  
+GROUP BY u.username, u.email, a.address,u.id
+ORDER BY u.id;
+
+--3rd query
+SELECT u.full_name
+FROM users u
+JOIN orders o ON o.user_id = u.id
+WHERE o.created_at BETWEEN DATE_TRUNC('month', NOW() - INTERVAL '1 month') AND NOW()
+GROUP BY u.id, u.full_name
+HAVING COUNT(DISTINCT DATE_TRUNC('month', o.created_at)) = 1;
+
+--4th query
+SELECT p.id AS product_id, 
+       p.title AS product_name, 
+       c.name AS category_name
+FROM products p
+JOIN categories c ON p.category_id = c.id
+LEFT JOIN order_items oi ON p.id = oi.product_id
+WHERE oi.product_id IS NULL;
+
+--5th query
+SELECT 
+    u.full_name,
+    a.address,
+    o.status 
+FROM users u 
+JOIN orders o ON o.user_id=u.id 
+JOIN address a ON o.address_id = a.id
+GROUP BY u.full_name,a.address,o.status
+ORDER BY u.full_name;
+
+--6th query
+SELECT 
+    c.id AS Category_id,
+    c.name AS Category_name,
+    p.id AS Product_id,
+    p.title AS Product_name,
+    SUM(oi.quantity) AS total_quantity,
+    rank() over(PARTITION BY c.name ORDER BY SUM(oi.quantity)) AS rank
+FROM Products p 
+JOIN order_items oi ON p.id=oi.id                                 
+JOIN categories c ON c.id=p.category_id 
+GROUP BY c.id,c.name,p.id,p.title,oi.quantity
+ORDER BY c.id,p.id,oi.quantity;
+
+--7th query
+SELECT 
+    u.full_name, 
+    SUM(o.total_price) AS total_money_spent,
+    RANK() OVER (ORDER BY SUM(o.total_price) DESC) AS rank
+FROM users u
+JOIN orders o ON o.user_id = u.id
+GROUP BY u.id, u.full_name;
+
+--8th query
+SELECT 
+    u.full_name, 
+    TO_CHAR(o.created_at, 'MM') AS order_month, 
+    SUM(oi.quantity) AS total_products_bought   
+FROM users u
+JOIN orders o ON o.user_id = u.id
+JOIN order_items oi ON oi.order_id = o.id
+GROUP BY u.id, u.full_name, order_month
+ORDER BY order_month DESC, total_products_bought DESC;
+
+--9th query
+SELECT
+    u.id AS users_id,
+    u.full_name AS user,
+    SUM(CASE WHEN o.status='Pending' THEN 1 ELSE 0 END) as pending,
+    SUM(CASE WHEN o.status='Delivered' THEN 1 ELSE 0 END) as delivered,
+    SUM(CASE WHEN o.status='Shipped' THEN 1 ELSE 0 END) as shipped
+FROM users u   
+JOIN orders o ON u.id=o.user_id
+GROUP BY u.id ,u.full_name  
+ORDER BY u.id;
+
+--10th query
+SELECT 
+    u.id AS users_id,
+    u.full_name AS user,
+    SUM(oi.quantity) AS total_quantity,
+    RANK() OVER(PARTITION BY product_id ORDER BY SUM(oi.quantity)) AS rank
+FROM order_items oi  
+JOIN orders o ON o.id=oi.order_id 
+JOIN users u ON u.id=o.user_id 
+GROUP BY u.id,u.full_name,oi.product_id
+ORDER BY u.id;  
+
