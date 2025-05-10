@@ -1,0 +1,111 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("./images/blackSky.jpg");
+    /* background: linear-gradient(135deg, #000428, #004e92); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.card {
+    display: flex;
+    width: 900px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+    overflow: hidden;
+}
+
+.left {
+    flex: 1;
+}
+
+.left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.right {
+    flex: 1;
+    padding: 40px;
+    text-align: center;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: cyan;
+    text-shadow: 0 0 10px cyan;
+}
+
+form input {
+    width: 100%;
+    padding: 12px;
+    margin: 7px 0;
+    border: 2px solid cyan;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #00ffea;
+    box-shadow: 0 0 10px cyan;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin: 7px 0;
+    background: cyan;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+    font-family: 'Orbitron', sans-serif;
+}
+
+button:hover {
+    background: white;
+    color: black;
+    box-shadow: 0 0 10px white;
+}
+
+p {
+    margin-top: 2px;
+    margin-bottom: 3px;
+}
+
+p a {
+    color: cyan;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+p a:hover {
+    text-shadow: 0 0 10px cyan;
+}
