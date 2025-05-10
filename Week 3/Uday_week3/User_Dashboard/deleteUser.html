@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <h2 class="text-center " style="margin-bottom:10px;margin-top:100px">DELETE USER</h2>
+    <div
+      class="mx-auto mt-5"
+      style="width: 350px; box-shadow: 0px 0px 5px black"
+    >
+    <form class="mx-auto my-1 p-3" style="width: 320px">
+        <div class="mb-3">
+            <label for="userId" class="form-label"> User Id</label>
+            <input type="number" class="form-control" id="userId" />
+        </div>
+        <div class="d-flex justify-content-center">
+            <button type="button" class="bg-primary border-0"
+             style="height: 30px; width: 150px" id="deleteButton">
+              Delete
+            </button>
+        </div>
+    </form>
+    </div>
+    <p class="text-center my-2" id="output"></p>
+
+
+    <script src="script.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+  </body>
+</html>
