@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFMIS Telangana</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/styles.css">
+
+</head>
+
+<body class="bg-light">
+
+    <div class="container-fluid p-0">
+        <!-- Top Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">IFMIS Telangana</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">LOGOUT <i class="bi bi-box-arrow-right"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <div class="row g-0">
+            <!-- Sidebar -->
+            <div class="col-md-3  text-white sidebar">
+                <div class="text-center py-4 border-bottom border-secondary">
+                    <div class="rounded-circle bg-secondary bg-opacity-25 d-flex align-items-center justify-content-center mx-auto mb-2"
+                        style="width: 60px; height: 60px;">
+                        <i class="bi bi-person-fill fs-3"></i>
+                    </div>
+                    <h6 class="mb-0">R.Anil Kumar</h6>
+                    <small>(0202)</small>
+                    <div class="mt-2">
+                        <a href="#" class="text-white-50 text-decoration-none small">View Profile</a><br>
+                        <a href="#" class="text-white-50 text-decoration-none small">Change Password</a>
+                    </div>
+                </div>
+
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a
+                            class="nav-link text-white-50 py-2 ps-3 border-start border-3 border-transparent"
+                            href="#">Home</a></li>
+                    <li class="nav-item"><a
+                            class="nav-link text-white-50 py-2 ps-3 border-start border-3 border-transparent"
+                            href="#">PPO Acceptance</a></li>
+                    <li class="nav-item"><a
+                            class="nav-link text-white-50 py-2 ps-3 border-start border-3 border-transparent"
+                            href="#">Print Grat./Comm. Bill</a></li>
+                    <li class="nav-item"><a
+                            class="nav-link text-white-50 py-2 ps-3 border-start border-3 border-transparent"
+                            href="#">Generate Grat./Comm. Bills</a></li>
+                    <li class="nav-item"><a
+                            class="nav-link text-white py-2 ps-3 border-start border-3 border-white bg-primary bg-opacity-25"
+                            href="#">Pension Master</a></li>
+                    <li class="nav-item"><a
+                            class="nav-link text-white-50 py-2 ps-3 border-start border-3 border-transparent"
+                            href="#">Close Pay Bank</a></li>
+                    <li class="nav-item"><a
+                            class="nav-link text-white-50 py-2 ps-3 border-start border-3 border-transparent"
+                            href="#">Arrear Bills</a></li>
+                    <li class="nav-item"><a
+                            class="nav-link text-white-50 py-2 ps-3 border-start border-3 border-transparent"
+                            href="#">SP to FP Conversion</a></li>
+                    <li class="nav-item"><a
+                            class="nav-link text-white-50 py-2 ps-3 border-start border-3 border-transparent"
+                            href="#">PPO Search</a></li>
+                    <li class="nav-item"><a
+                            class="nav-link text-white-50 py-2 ps-3 border-start border-3 border-transparent"
+                            href="#">Pension Check</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white-50 py-2 ps-3 border-start border-3 border-transparent d-flex justify-content-between"
+                            href="#" data-bs-toggle="collapse" data-bs-target="#incomeTaxSubmenu">
+                            Income Tax <i class="bi bi-chevron-down"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item"><a
+                            class="nav-link text-white-50 py-2 ps-3 border-start border-3 border-transparent"
+                            href="#">Accept Transfer</a></li>
+                    <li class="nav-item"><a
+                            class="nav-link text-white-50 py-2 ps-3 border-start border-3 border-transparent"
+                            href="#">Transfer</a></li>
+                    <li class="nav-item"><a
+                            class="nav-link text-white-50 py-2 ps-3 border-start border-3 border-transparent"
+                            href="#">Approve bank details</a></li>
+                    <li class="nav-item"><a
+                            class="nav-link text-white-50 py-2 ps-3 border-start border-3 border-transparent"
+                            href="#">Annual Verification Certificate</a></li>
+                    <li class="nav-item"><a
+                            class="nav-link text-white-50 py-2 ps-3 border-start border-3 border-transparent"
+                            href="#">Pensions Reports</a></li>
+                    <li class="nav-item"><a
+                            class="nav-link text-white-50 py-2 ps-3 border-start border-3 border-transparent"
+                            href="#">Fore Close Recovery</a></li>
+                    <li class="nav-item"><a
+                            class="nav-link text-white-50 py-2 ps-3 border-start border-3 border-transparent"
+                            href="#">Pen Bills scrollround</a></li>
+                    <li class="nav-item"><a
+                            class="nav-link text-white-50 py-2 ps-3 border-start border-3 border-transparent"
+                            href="#">Open Pay Bank</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white-50 py-2 ps-3 border-start border-3 border-transparent d-flex justify-content-between"
+                            href="#" data-bs-toggle="collapse" data-bs-target="#prcSubmenu">
+                            PRC <i class="bi bi-chevron-down"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-9">
+
+                <!-- Back Button and Title -->
+                <div class="bg-light p-2 border-bottom">
+                    <button class="btn btn-sm btn-dark">
+                        <i class="bi bi-chevron-left"></i> BACK
+                    </button>
+                    <span class="ms-3 fw-bold">HAJARA BEE / 13018539</span>
+                </div>
+
+                <!-- Pension Details Section -->
+                <div class="container-fluid py-3">
+                    <div class="row mb-4">
+                        <div class="col-md-8">
+                            <h5>Pension details</h5>
+                        </div>
+                
+                    </div>
+
+                    <!-- Pension Details Table & all the side divs-->
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="card mb-4 rounded-3 shadow-sm">
+                                <div class="card-body">
+                                    <div>
+                                        <div class="row mb-3">
+                                            <div class="col-md-4">
+                                                <label class="text-secondary">PPO ID :</label>
+                                                <div class="fw-bold">********</div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="text-secondary">PPO NUMBER :</label>
+                                                <div class="fw-bold">********</div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="text-secondary">PENSION TYPE :</label>
+                                                <div class="text-primary fw-bold">FAMILY PENSION</div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-md-4">
+                                                <label class="text-secondary">PENSION CATEGORY :</label>
+                                                <div class="fw-bold">Civil Pension</div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="text-secondary">DATE OF RETIREMENT :</label>
+                                                <div class="fw-bold">********</div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-md-4">
+                                                <label class="text-secondary">PENSION START DATE :</label>
+                                                <div class="fw-bold">23-11-1992</div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="text-secondary">EFP UPTO :</label>
+                                                <div class="fw-bold">06-10-1925</div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-md-4">
+                                                <label class="text-secondary">SCALE TYPE :</label>
+                                                <div class="fw-bold">State Scale</div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="text-secondary">STATE :</label>
+                                                <div class="fw-bold">Karnataka</div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-md-4">
+                                                <label class="text-secondary">PRC :</label>
+                                                <div class="fw-bold">2008</div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="text-secondary">FP DOD :</label>
+                                                <div class="fw-bold">-</div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-md-4">
+                                                <label class="text-secondary">FAMILY PENSIONER NAME :</label>
+                                                <div class="fw-bold">********</div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="text-secondary">RDA :</label>
+                                                <div class="fw-bold">87930010800000000NVYN</div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-md-4">
+                                                <label class="text-secondary">PRESENT BASIC :</label>
+                                                <div class="text-primary fw-bold">6432.00</div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="text-secondary">CVP AMOUNT :</label>
+                                                <div class="fw-bold">0.00</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-info-subtle">
+                                        <div class="row mb-3">
+                                            <div class="col-md-12">
+                                                <label class="text-secondary">NFP (NORMAL SERVICE PENSION) :</label>
+                                                <div class="fw-bold">0 (Comp:- 0.00 ) (TG:- 0.00 ) (AP:- 0.00 )</div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-md-12">
+                                                <label class="text-secondary">EFP (ENHANCED FAMILY PENSION) :</label>
+                                                <div class="fw-bold">0 (Comp:- 0.00 ) (TG:- 0.00 ) (AP:- 0.00 )</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label class="text-secondary">FP (FAMILY PENSION) :</label>
+                                                <div class="fw-bold">6432 (Comp:- 0.00 ) (TG:- 0.00 ) (AP:- 0.00 )</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <!-- status and add button -->
+                            <div class="row align-items-start">
+                                <div class="col-12 col-md-8">
+                                    <h5>Status</h5>
+                                    <div class="alert alert-warning py-1 px-2 mb-1">
+                                        <strong>Temporary Stop</strong>
+                                    </div>
+                                    <small class="text-danger">Reason: 02 - Death of Service Pensioner</small>
+                                </div>
+                                <div class="col-12 col-md-4 text-md-end mt-3 mt-md-0">
+                                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+                                        data-bs-target="#staticBackdrop">Add Legal Heir</button>
+                                </div>
+                                <!-- Modal -->
+                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog  modal-lg ">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Legal Heir</h1>
+                                                <button type="button" id="close" class="btn-close"
+                                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form class="needsvalidation" novalidate>
+                                                    <div class="row mb-2">
+                                                        <div class="col-sm-6">
+                                                            <label class="form-label">Legal Heir Name <strong
+                                                                    class="text-danger">*</strong>:</label>
+                                                            <input class='form-control' id="name" placeholder="Name">
+                                                            <p class="errorName text-danger"></p>
+                                                        </div>
+
+                                                        <div class="col-sm-6">
+                                                            <label class="form-label">Legal Heir Realtion<strong
+                                                                    class="text-danger">*</strong>:</label>
+                                                            <input class='form-control' id="relation"
+                                                                placeholder="Realtion">
+                                                            <p class="errorRelation text-danger"></p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row mb-2">
+                                                        <div class="col-sm-6">
+                                                            <label class="form-label">Phone Number<strong
+                                                                    class="text-danger">*</strong>:</label>
+                                                            <input class='form-control' id="phone" placeholder="Phone">
+                                                            <p class="errorPhone text-danger"></p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row mt-5 mb-2">
+                                                        <h5>Bank Details</h5>
+                                                        <div class="col-sm-6">
+                                                            <label class="form-label">Bank Ac/No<strong
+                                                                    class="text-danger">*</strong>:</label>
+                                                            <input class='form-control' id="bankno"
+                                                                placeholder="Bank Acno">
+                                                            <p class="errorbankno text-danger"></p>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <label class="form-label">Confirm Bank Ac/No<strong
+                                                                    class="text-danger">*</strong>:</label>
+                                                            <input class='form-control' id="confirmbank"
+                                                                placeholder="Confirm Bank Acco">
+                                                            <p class="errorconfirmbank text-danger"></p>
+                                                        </div>
+                                                    </div>
+
+
+
+                                                    <div class="row mb-2">
+                                                        <div class="col-sm-6">
+                                                            <label class="form-label">IFSC Code<strong
+                                                                    class="text-danger">*</strong>:</label>
+                                                            <div class="d-flex input-group">
+                                                                <input class='form-control' id="ifsc"
+                                                                    placeholder="ENTER IFSC & SEARCH">
+                                                                <button class="btn btn-success"
+                                                                    id="searchifsc">SEARCH</button>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mt-4 row">
+                                                        <div class="col-sm-6">
+                                                            <div class="d-flex">
+                                                                <label class="form-label me-2">Bank Name :</label>
+                                                                <p class="bankname"></p>
+                                                            </div>
+                                                            <p class="text-secondary" id="waitPara1">Please Enter IFSC Code first to
+                                                                get Bank Name</p>
+                                                        </div>
+
+                                                        <div class="col-sm-6">
+                                                            <div class="d-flex">
+                                                                <label class="form-label me-2">Branch Name :</label>
+                                                                <p class="bankbranch"></p>
+                                                            </div>
+                                                            <p class="text-secondary" id="waitPara2">Please Enter IFSC Code first to
+                                                                get Bank Branch</p>
+                                                        </div>
+
+                                                    </div>
+
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" id="close1"
+                                                    data-bs-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary"
+                                                    id="submit">Submit</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Personal Details Section -->
+                            <div class="card mb-4 rounded-3 shadow-sm">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <h5 class="mb-0">Personal Details</h5>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-md-6">
+                                            <label class="text-secondary">PENSIONER NAME :</label>
+                                            <div class="fw-bold">********</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="text-secondary">GENDER :</label>
+                                            <div class="fw-bold">MALE</div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label class="text-secondary">DOB :</label>
+                                            <div class="fw-bold">07-10-1925</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="text-secondary">AGE :</label>
+                                            <div class="fw-bold">97 Years</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Pension Info Section -->
+                            <div class="card mb-4 rounded-3 shadow-sm">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <h5 class="mb-0">Pension Info <small>(update/edit)</small></h5>
+                                        <button class="btn btn-sm btn-outline-primary">EDIT</button>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-md-12">
+                                            <label class="text-secondary">FAMILY PENSION :</label>
+                                            <div class="d-flex align-items-center">
+                                                <span class="me-2 fw-bold">Eligible</span>
+                                                <span
+                                                    class="badge bg-success rounded-circle d-inline-flex align-items-center justify-content-center"
+                                                    style="width: 20px; height: 20px;"><i
+                                                        class="bi bi-check"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <label class="text-secondary">EMPLOYEE ID :</label>
+                                            <div class="input-group mt-1">
+                                                <input type="text" class="form-control" placeholder="Enter Employee ID">
+                                                <button class="btn btn-success">UPDATE</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Contact Info Section -->
+                            <div class="card mb-4 rounded-3 shadow-sm">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <h5 class="mb-0">Contact Info</h5>
+                                        <button class="btn btn-sm btn-outline-primary">EDIT</button>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-md-6">
+                                            <label class="text-secondary">PHONE :</label>
+                                            <div class="fw-bold">tel</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="text-secondary">EMAIL :</label>
+                                            <div class="fw-bold">email</div>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-md-6">
+                                            <label class="text-secondary">PAN :</label>
+                                            <div class="fw-bold">PAN</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="text-secondary">AADHAAR NO :</label>
+                                            <div class="fw-bold">******</div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <label class="text-secondary">ADDRESS :</label>
+                                            <div class="fw-bold">adr1, adr2, adr3</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  
+        <script src="../js/app.js"></script>
+</body>
+
+</html>
