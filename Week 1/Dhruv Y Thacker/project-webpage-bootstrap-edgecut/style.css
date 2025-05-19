@@ -1,0 +1,146 @@
+* {
+    font-family: "Poppins", sans-serif
+}
+
+a {
+    text-decoration: none;
+}
+
+.color{
+    color: #6bb7be;
+}
+
+/* caoursel-section */
+.slider_section {
+    height: 100vh;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.long_section {
+    margin-left: 45px;
+    margin-right: 45px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.slider_section .detail-box h1 {
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.slider_section .detail-box p {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.slider_section .img-box img {
+    width: 100%;
+    align-items: center;
+}
+
+.slider_section .detail-box .btn-box a {
+    margin: 5px;
+    text-align: center;
+    width: auto;
+}
+
+.slider_section .detail-box .btn-box .btn1 {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #f89646;
+    color: #fff;
+    border-radius: 0;
+    border: 1px solid #f89646;
+    transition: all .2s;
+}
+
+.slider_section .detail-box .btn-box .btn2 {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #6bb7be;
+    color: #fff;
+    border-radius: 0;
+    border: 1px solid #6bb7be;
+    transition: all .2s;
+}
+
+.slider_section .detail-box .btn-box .btn2:hover {
+    background-color: #fff;
+    color: #6bb7be;
+    border-radius: 0;
+    border: 1px solid #6bb7be;
+}
+
+.slider_section .detail-box .btn-box .btn1:hover {
+    background-color: #fff;
+    color: #f89646;
+    border-radius: 0;
+    border: 1px solid #f89646;
+}
+
+.about_section .btn-box{
+    background-color: #6bb7be;
+    color: #fff;
+}
+
+.about_section .btn-box:hover{
+    background-color: #fff;
+    color: #fff;
+    background-color: #6bb7be;
+}
+
+/* testimonial-section */
+.client_section .box {
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+}
+
+.client_section .img-box {
+    width: 125px;
+    min-width: 125px;
+    border-radius: 100%;
+    border: 10px solid #6bb7be;
+    margin-right: 25px;
+    min-width: 175px;
+    max-width: 175px;
+    overflow: hidden;
+}
+
+.client_section .carousel-control-prev,
+.client_section .carousel-control-next {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    background-color: #6bb7be;
+    opacity: 1;
+}
+
+.client_section .carousel-control-prev:hover,
+.client_section .carousel-control-next:hover {
+    background-color: #000000;
+}
+
+
+/* contact-us-section */
+.contact-us .btn_box .btn1 {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #6bb7be;
+    color: #fff;
+    border-radius: 0;
+    border: 1px solid #6bb7be;
+    transition: all .2s;
+}
+
+.contact-us .btn_box .btn1:hover {
+    background-color: #fff;
+    color: #6bb7be;
+    border-radius: 0;
+    border: 1px solid #6bb7be;
+    cursor: pointer;
+}

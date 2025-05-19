@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <script src="https://kit.fontawesome.com/41df4b52da.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styl.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.16.0/dist/sweetalert2.min.css" integrity="sha256-YiFT9lvNOGMbi29lCphiiB6iZOnEnj6SJ4R6Y1n8ukM=" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11.16.0/dist/sweetalert2.all.min.js" integrity="sha256-JxrPeaXEC22LUNm25PF02qeQ756a2XN/mxPJlfk9Lb8=" crossorigin="anonymous"></script>
+
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="left">
+                <img src="./images/nebula.jpg" alt="Galaxy Nebula">
+            </div>
+            <div class="right">
+                <h2>Join the Cosmic Journey</h2>
+                <form onsubmit="validateForm(event)">
+                    <label for=" Username">UserName</label>
+                    <input type="text" id="fname" placeholder="Username" onblur="userNameValidation()" >
+                    <p id="userName_hint"></p>
+                    <label for="Email">Email</label>
+                    <input type="email" id="femail" placeholder="Email" onblur="emailValidation()" >
+                    <p id="email_hint"></p>
+                    <label for="Password">Password</label>
+                    <input type="password" id="fpwd" placeholder="Password" onblur="passwordValidation()" >
+                    <p id="password_hint"></p>
+                    <label for="Phone">Phone Number</label>
+                    <input type="tel" id="ftel" placeholder="Phone Number" onblur="contactValidation()" >
+                    <p id="number_hint"></p>
+                    <button type="submit">Register</button>
+                    <!-- <p>------or continue with------</p>
+                    <button style="margin-top: 8px;">Google</button> -->
+                    <p>Already have an account? <a href="login.html">Login</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
