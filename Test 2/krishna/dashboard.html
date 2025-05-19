@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+
+<body class="bg-body-secondary">
+    
+    <div id="container"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: "api/isClocked.php",
+                type: "POST",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                    "Authorization": sessionStorage.getItem("token")
+                },
+                data:{
+                    date:new Date().toISOString().slice(0, 10)
+                },
+                success:function(res){
+                    if(res.data){
+                        $("#container").load("clockOut.html")
+
+                    }
+                    else{
+                        $("#container").load("clockIn.html")
+                    }
+                },
+                error:function(err){
+                    console.log(err)
+                    Swal.fire("Info",err.responseJSON.message,"info").then(()=>{
+                        window.location.href="profile.html"
+                    })
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>
