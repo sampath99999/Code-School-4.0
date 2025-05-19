@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin Panel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .card {
+            margin-bottom: 20px;
+        }
+        .container.position-relative {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="container position-relative">
+        <button id="logout-btn" class="btn btn-danger position-absolute" style="top: 20px; right: 0;" href="./login.html">
+            Logout
+        </button>
+
+        <h1 class="mb-4">I Store Admin Panel</h1>
+
+        <ul class="nav nav-tabs mb-4">
+            <li class="nav-item">
+                <a class="nav-link active" href="#" id="users-tab">Users</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" id="order-items-tab">Order Items</a>
+            </li>
+        </ul>
+
+        <div id="users-content">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Users</h3>
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped" id="users-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Users will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div id="order-items-content" style="display: none;">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Order Items</h3>
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped" id="order-items-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Order ID</th>
+                                <th>Product ID</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="admin_panel.js"></script>
+</body>
+</html>
