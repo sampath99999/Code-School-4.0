@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Payslip</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div id="navbar"></div>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">Payslip Details</h5>
+                        <button class="btn btn-primary" onclick="window.print()">
+                            <i class="fas fa-print"></i> Print
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <h6>Employee Information</h6>
+                                <table class="table table-borderless">
+                                    <tr>
+                                        <th>Name:</th>
+                                        <td id="employeeName"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Department:</th>
+                                        <td id="department"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Designation:</th>
+                                        <td id="designation"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-md-6">
+                                <h6>Payslip Information</h6>
+                                <table class="table table-borderless">
+                                    <tr>
+                                        <th>Month:</th>
+                                        <td id="month"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Year:</th>
+                                        <td id="year"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Generated On:</th>
+                                        <td id="generatedAt"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <h6>Salary Details</h6>
+                                <table class="table">
+                                    <tr>
+                                        <th>Basic Salary</th>
+                                        <td id="basicSalary"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Allowances</th>
+                                        <td id="allowances"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Deductions</th>
+                                        <td id="deductions"></td>
+                                    </tr>
+                                    <tr class="table-primary">
+                                        <th>Total Salary</th>
+                                        <td id="totalSalary"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="assets/scripts/navbar.js"></script>
+    <script src="assets/scripts/viewPayslip.js"></script>
+</body>
+</html> 
