@@ -1,0 +1,154 @@
+/* General */
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Navbar */
+.custom-navbar {
+  background-color: #212529;
+  padding: px 0;
+}
+
+.navbar-brand {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.navbar-brand:hover {
+  color: #f8d210;
+}
+
+.nav-link {
+  color: #e4e4e4;
+  margin: 0 12px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #f8d210;
+}
+
+/* Buttons */
+.btn {
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+.icon-button {
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.icon-button:hover {
+  color: #f8d210;
+}
+
+/* Hero Section */
+.hero {
+  background: url('https://images.pexels.com/photos/9771828/pexels-photo-9771828.jpeg?auto=compress&cs=tinysrgb&w=600') no-repeat center center;
+  background-size: cover;
+  border-radius: 12px;
+  padding: 100px 30px;
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+  border-radius: 12px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  color: #ddd;
+}
+
+
+.product-card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+  background-color: #fff;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+}
+
+.product-card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-card .card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.product-card .card-text {
+  color: #555;
+  font-weight: 500;
+}
+
+
+.search-input {
+  border-radius: 8px;
+  padding: 12px 18px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #f8d210;
+  box-shadow: 0 0 0 0.2rem rgba(248, 210, 16, 0.25);
+  outline: none;
+}
+
+
+#brandCarousel {
+  max-height: 120px;
+  background-color: #f2f2f2;
+  border-radius: 12px;
+}
+
+.brand-logo {
+  max-height: 80px;
+  width: auto;
+  margin: 10px auto;
+}
+
+
+
+
