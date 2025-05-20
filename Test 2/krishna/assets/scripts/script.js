@@ -89,13 +89,15 @@ $(document).ready(function(){
                 },
                 data:data,
                 success:function(res){
-                    sessionStorage.setItem("token",res.data.token)
+                    localStorage.setItem("token",res.data.token)
                     Swal.fire("Success",res.message,"success").then(()=>{
                         if(res.data.role=="hr"){
-                            window.location.href="addEmployee.html"
+                            sessionStorage.setItem("role","hr")
+                            window.location.href="admin_dashboard.html"
                         }
                         else{
-                            window.location.href="dashboard.html"
+                            sessionStorage.setItem("role","user")
+                            window.location.href="user_dashboard.html"
 
                         }
                     })
