@@ -4,7 +4,7 @@ const DB_HOST = "localhost";
 const DB_PORT = 5432;
 const DB_NAME = "spotify";
 const DB_USERNAME = "postgres";
-const DB_PASSWORD = "Mahadev@234";
+const DB_PASSWORD = "*******";
 
 function getPDO()
 {
